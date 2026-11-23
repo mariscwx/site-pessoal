@@ -1,0 +1,786 @@
+﻿@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* --- Fontes Customizadas --- */
+@font-face {
+    font-family: 'tommy';
+    src: url("../fonts/tommy-font/tommy-font.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tommy';
+    src: url("../fonts/tommy-font/tommy-font-bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* --- Variáveis Globais (Figma Node 187:280) --- */
+:root {
+    --fundo-pagina: #F5F0EC;
+    --verde-escuro: #004D32;       /* Verde 004D32 */
+    --verde-medio: #258f43;
+    --verde-pill: #289146;
+    --verde-limao: #c8f53c;
+    --fundo-card-claro: #F5F0EC;
+    --texto-escuro: #004D32;
+    --texto-secundario: #4b5853;
+    --borda-suave: #d9dfdb;
+
+    --fonte-1: 'tommy', serif;
+    --fonte-2: 'DM Sans', sans-serif;
+}
+
+/* Sem sombras em nenhum elemento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none !important;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    color: var(--texto-escuro);
+    font-family: var(--fonte-2);
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.bold {
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+/* ==========================================================
+   1. CABEÇALHO / GLASS EFFECT (1255x76, risco 4x56)
+   ========================================================== */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 42px;
+    padding-bottom: 20px;
+}
+
+.nav-glass {
+    width: 1255px;
+    height: 76px;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-logo {
+    width: 185px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.nav-divisor {
+    width: 4px;
+    height: 56px;
+    background-color: #FFFFFF;
+    margin: 0 35px 0 28px;
+    border-radius: 2px;
+}
+
+.nav-itens {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-left: auto;
+}
+
+.nav-nome {
+    font-size: 38px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.nav-nome.julie { color: #4669fa; }
+.nav-nome.mariana { color: #e9508d; }
+.nav-nome.mayte { color: #d13b53; }
+
+/* Botão Pedro: 156x52, corner radius 10, semibold */
+.pedro-btn {
+    width: 156px;
+    height: 52px;
+    background-color: var(--verde-medio);
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ==========================================================
+   2. HERO / APRESENTAÇÃO
+   ========================================================== */
+.hero-secao {
+    width: 1255px;
+    margin: 40px auto 40px;
+    position: relative;
+}
+
+.brilho-topo-esq {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    width: 68px;
+    height: 80px;
+}
+
+.hero-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-textos {
+    flex: 1;
+    max-width: 583px;
+}
+
+.linha-pedro-almeida {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    position: relative;
+}
+
+.pedro-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* "Pedro": DM Sans 900 (black) 99.44px */
+.texto-pedro {
+    font-family: var(--fonte-2);
+    font-size: 99.44px;
+    font-weight: 900;
+    color: var(--verde-escuro);
+    line-height: 0.95;
+}
+
+/* Risco embaixo de Pedro: 266.5px x 14.7px */
+.pedro-risco {
+    width: 266.5px;
+    height: 14.7px;
+    margin-top: -6px;
+}
+
+/* "Almeida": 53.06px Medium (500) */
+.texto-almeida {
+    font-family: var(--fonte-2);
+    font-size: 53.06px;
+    font-weight: 500;
+    color: var(--verde-escuro);
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.raios-doodle {
+    width: 100px;
+    height: 106px;
+    margin-bottom: 10px;
+}
+
+.linha-rufino {
+    margin-top: 14px;
+}
+
+/* "Rufino": 557.2px x 156.8px no Figma */
+.badge-rufino {
+    background-color: var(--verde-limao);
+    color: var(--verde-escuro);
+    font-family: var(--fonte-1);
+    font-size: 130.31px;
+    line-height: 1;
+    width: 557px;
+    height: 157px;
+    border-radius: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Descrição: 32.63px, max-width 583px */
+.hero-descricao {
+    font-size: 32.63px;
+    line-height: 1.35;
+    color: var(--texto-secundario);
+    margin-top: 32px;
+    max-width: 583px;
+}
+
+/* Imagem Início (744x527) e Brilho (119x160) */
+.hero-imagem-wrapper {
+    position: relative;
+    width: 744px;
+    height: 527px;
+    flex-shrink: 0;
+}
+
+.img-pedro-inicio {
+    width: 744px;
+    height: 527px;
+    object-fit: contain;
+}
+
+.brilho-sobre-imagem {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    width: 119px;
+    height: 160px;
+    z-index: 5;
+}
+
+/* Quadriculado: 202.75x67.75 */
+.quadriculado-hero {
+    position: absolute;
+    bottom: -25px;
+    right: 30px;
+    width: 202.75px;
+    height: 67.75px;
+}
+
+/* ==========================================================
+   3. BORDAS EXTERIORES DAS SEÇÕES VERDES (PEDRO-CURVAS2)
+   ========================================================== */
+.curva-borda-exterior {
+    width: 100%;
+    display: block;
+    line-height: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+}
+
+.curva-borda-exterior.curva-topo {
+    margin-bottom: -2px;
+}
+
+.curva-borda-exterior.curva-baixo {
+    margin-top: -2px;
+    transform: rotate(180deg);
+}
+
+.secao-full-verde {
+    width: 100%;
+    background-color: var(--verde-escuro);
+    border-radius: 0;
+    position: relative;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.conteudo-centralizado {
+    width: 1255px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   4. SOBRE MIM (EXATO DO FIGMA)
+   ========================================================== */
+.titulo-sobre {
+    font-family: var(--fonte-1);
+    font-size: 96px;
+    color: var(--verde-limao);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.sobre-grade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.sobre-bio {
+    font-size: 24px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 660px;
+}
+
+/* Linha divisória vertical: 426px */
+.divisor-vertical-branco {
+    width: 2px;
+    height: 426px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Caixa Lateral: 488px x 423px */
+.card-dados-wrapper {
+    position: relative;
+    width: 488px;
+    height: 423px;
+    flex-shrink: 0;
+}
+
+/* Raio amarelo do card: 86x91 */
+.raio-sobre-card {
+    position: absolute;
+    top: -30px;
+    right: -25px;
+    width: 86px;
+    height: 91px;
+    z-index: 3;
+}
+
+.card-dados-pessoais {
+    width: 488px;
+    height: 423px;
+    background-color: var(--fundo-card-claro);
+    border-radius: 32px;
+    padding: 34px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-dados-pessoais hr {
+    border: none;
+    border-top: 1px solid var(--borda-suave);
+    width: 100%;
+}
+
+.linha-dado {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.linha-dado img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.linha-dado p {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--texto-escuro);
+    line-height: 1.3;
+}
+
+/* Pills inferiores: altura 85px com círculo de 85px */
+.caracteristicas-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.carac-pill {
+    height: 85px;
+    background-color: var(--verde-pill);
+    border-radius: 43px;
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+}
+
+.pill-calmo { width: 375px; }
+.pill-analitico { width: 406px; }
+.pill-criativo { width: 375px; }
+
+.carac-circulo-icone {
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+
+.carac-circulo-icone img {
+    width: 48px;
+    height: 48px;
+}
+
+.carac-pill p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   5. FAVORITOS (Fonte 130.31px)
+   ========================================================== */
+.favoritos-secao {
+    width: 1255px;
+    margin: 60px auto 30px;
+    position: relative;
+}
+
+.favoritos-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.titulo-wrapper-favoritos {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo-linha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icone-secao {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Título Favoritos em 130.31px */
+.titulo-favoritos {
+    font-family: var(--fonte-1);
+    font-size: 130.31px;
+    font-weight: 400;
+    color: var(--verde-escuro);
+    line-height: 1;
+}
+
+/* Risco 336.5px embaixo de Favoritos */
+.risco-amarelo-favoritos {
+    width: 336.5px;
+    height: 24px;
+    margin-top: -6px;
+    margin-left: 100px;
+}
+
+.favoritos-subtexto {
+    font-size: 24px;
+    color: var(--texto-secundario);
+    max-width: 680px;
+    margin-top: 14px;
+}
+
+/* Pedro-favoritos: 606.3px x 298px */
+.img-ilustra-favoritos {
+    width: 606.3px;
+    height: 298px;
+    object-fit: contain;
+    margin-top: -30px;
+}
+
+/* Cards (398x469px) */
+.grade-favoritos {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.card-favorito {
+    width: 398px;
+    height: 469px;
+    border: 2px solid var(--verde-escuro);
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-favorito h3 {
+    background-color: var(--fundo-card-claro);
+    border-bottom: 2px solid var(--verde-escuro);
+    text-align: center;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.card-favorito.card-verde {
+    background-color: var(--verde-escuro);
+}
+
+.tags-interesses {
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.tags-interesses span {
+    background: #FFFFFF;
+    color: var(--verde-escuro);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.tag-livros { width: 161px; }
+.tag-marvel { width: 165px; }
+.tag-filmes { width: 164px; }
+.tag-lego { width: 147px; }
+.tag-natacao { width: 183px; }
+
+.card-favorito.card-branco {
+    background-color: #FFFFFF;
+}
+
+.card-favorito.card-branco ul {
+    list-style: none;
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-favorito.card-branco li {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* Bolinhas redondas da lista */
+.bullet-bolinha {
+    width: 14px;
+    height: 14px;
+    background-color: var(--verde-limao);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+/* Cantores e livros com as imagens do Figma */
+.midia-favoritos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.linha-cantores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.cantor-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-cantor {
+    height: 100px;
+    object-fit: contain;
+}
+
+.linha-livros {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.img-livro {
+    height: 120px;
+    object-fit: contain;
+}
+
+.quadriculado-baixo {
+    position: absolute;
+    bottom: -65px;
+    right: 20px;
+    width: 202.75px;
+    height: 67.75px;
+    z-index: 3;
+}
+
+/* Curva após Favoritos */
+.curva-favoritos-lugares {
+    width: 100%;
+    display: block;
+    margin: 40px 0 10px;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   6. LUGARES (Fonte 130.31px, Gap 52px, Avião sobrepondo)
+   ========================================================== */
+.lugares-secao {
+    width: 1255px;
+    margin: 10px auto 40px;
+    position: relative;
+}
+
+.lugares-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Ícone de localização e Título Lugares lado a lado */
+.titulo-icone-lugares {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icone-lugares {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+
+.titulo-lugares {
+    font-family: var(--fonte-1);
+    font-size: 130.31px;
+    font-weight: 400;
+    color: var(--verde-escuro);
+    line-height: 1;
+}
+
+/* Avião com 489.03px de largura sobrepondo a mancha verde e os cards */
+.img-aviao {
+    width: 489.03px;
+    object-fit: contain;
+    position: absolute;
+    top: -70px;
+    right: -40px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Container dos cards com a mancha verde */
+.lugares-container-cards {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 30px;
+}
+
+.mancha-verde-lugares {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    width: 1400px;
+    max-width: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Gap de 52px exato do Figma (756 - (239+465) = 52px) */
+.grade-lugares {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    width: 100%;
+}
+
+.card-lugar-img {
+    width: 465px;
+    height: 615.7px;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+/* Estrelas no canto inferior esquerdo */
+.brilho-lugares-esq {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 75px;
+    z-index: 3;
+}
+
+/* ==========================================================
+   7. HABILIDADES (100% LARGURA)
+   ========================================================== */
+.habilidades-cabecalho h2.titulo-habilidades {
+    font-family: var(--fonte-1);
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.habilidades-subtexto {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 720px;
+    margin: 12px 0 16px;
+    line-height: 1.4;
+}
+
+.risco-verde-claro {
+    width: 180px;
+    margin-bottom: 40px;
+}
+
+.habilidades-grade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.img-laptop {
+    width: 450px;
+    height: 353px;
+    object-fit: contain;
+}
+
+.img-techs {
+    width: 837px;
+    height: 229px;
+    object-fit: contain;
+}
