@@ -320,51 +320,68 @@ main {
 }
 
 @media (min-width: 768px) {
-  .menu .container-fluid {
-    flex-direction: row;
-  }
+    .menu .container-fluid {
+        flex-direction: row;
+    }
 
-  .perfil {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    padding-block: 3.75rem 4.375rem;
-    text-align: left;
-  }
+    .perfil {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        padding-block: 3.75rem 4.375rem;
+        text-align: left;
+    }
 
-  .icone-presente {
-    top: 2.1875rem;
-    left: 30%;
-  }
+    .icone-presente {
+        top: 2.1875rem;
+        left: 30%;
+    }
 
-  .icone-fone {
-    top: 2.5rem;
-    right: 5%;
-  }
+    .icone-fone {
+        top: 2.5rem;
+        right: 5%;
+    }
 
-  .destaques {
-    padding-bottom: 3rem;
-  }
+    .destaques {
+        padding-bottom: 3rem;
+    }
 
-  .filme {
-    overflow-x: visible;
-  }
+    .filme {
+        overflow-x: visible;
+    }
 
-  .filme-quadros {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    padding-inline: 0;
-    width: 100%;
-  }
+    .filme-quadros {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        padding-inline: 0;
+        width: 100%;
+    }
 
-  .cartoes {
-    padding-block: 3rem;
-  }
+    .cartoes {
+        padding-block: 3rem;
+    }
 
-  .cartao {
-    padding: 2rem;
-  }
+    .cartao {
+        padding: 2rem;
+    }
 
-  .icone-aviao {
-    top: -1rem;
-  }
+    .icone-aviao {
+        top: -1rem;
+    }
+
+    .link-julie   { color: #4a63e7; }
+    .link-mariana { color: #e8548a; }
+    .link-mayte   { color: #c8344f; }
+    .link-pedro   { color: #2a9248; }
+
+    .menu-link.active {
+        color: #fff;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 0.35rem 0.9rem;
+    }
+
+    .link-julie.active   { background-color: #4a63e7; }
+    .link-mariana.active { background-color: #e8548a; }
+    .link-mayte.active   { background-color: #c8344f; }
+    .link-pedro.active   { background-color: #2a9248; }
 }
