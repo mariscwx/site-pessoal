@@ -19,13 +19,411 @@
 :root{
     --fonte-1: 'tommy', serif;
     --fonte-2: 'DM Sans', sans-serif;
+
+    /* unidade base: 0.8% da largura da tela, no máximo 12px */
+    --u: min(0.8vw, 12px);
+
+    /* unidade dos perfis: 1px do Figma (1440px de largura) */
+    --W: min(100vw, 1440px);
+    --p: calc(var(--W) / 1440);
+
+    --rosa: #f0407a;
+    --rosa-escuro: #e0215f;
+    --verde: #2a9a2a;
+    --lima: #bfe81a;
+    --vermelho: #a8112d;
+    --azul: #0a3fb0;
+    --ciano: #00a8e8;
+    --creme: #ece3e0;
+    --amarelo: #f5c800;
 }
 
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
 body{
     font-family: var(--fonte-2);
+    background: var(--creme);
+    color: #fff;
+    overflow-x: hidden;
+}
+main{ overflow: hidden; }
+h1{ font-family: var(--fonte-1); font-weight: 400; }
+h2, h3{ font-weight: 400; }
+img{ display: block; max-width: 100%; }
+a{ text-decoration: none; }
+
+/* ===== ESTRELAS ===== */
+.estrela{
+    position: absolute;
+    width: calc(var(--u) * 3);
+    height: calc(var(--u) * 3);
+    background: var(--amarelo);
+    clip-path: polygon(50% 0, 60% 35%, 100% 50%, 60% 65%, 50% 100%, 40% 65%, 0 50%, 40% 35%);
+}
+.perfil__estrela{
+    position: absolute;
+    z-index: 2;
+    top: calc(var(--p) * 12);
+    right: calc(var(--p) * 8);
+    width: calc(var(--p) * 115);
+    height: calc(var(--p) * 115);
+    background: var(--amarelo);
+    clip-path: polygon(100% 50%, 74% 60%, 85.4% 85.4%, 60% 74%, 50% 100%, 40% 74%, 14.6% 85.4%, 26% 60%, 0 50%, 26% 40%, 14.6% 14.6%, 40% 26%, 50% 0, 60% 26%, 85.4% 14.6%, 74% 40%);
 }
 
-h1{
+/* ===== HEADER ===== */
+.header{
+    --h: min(88vw, 1200px);
+    position: fixed;
+    top: calc(var(--h) * .015);
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--h);
+    height: calc(var(--h) * .07);
+    z-index: 100;
+    display: flex;
+    align-items: stretch;
+    background: rgba(255, 255, 255, .55);
+    border: 1px solid rgba(255, 255, 255, .6);
+    backdrop-filter: blur(8px);
+    border-radius: calc(var(--h) * .014);
+}
+
+/* logo centralizada na área da esquerda, com a linha divisória */
+.header__logo{
+    flex: 0 0 25.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    border-right: 1px solid rgba(0, 0, 0, .08);
+}
+.header__logo img{
+    width: calc(var(--h) * .13);
+    height: auto;
+}
+
+/* links espalhados igualmente */
+.header__nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+    font-size: calc(var(--h) * .021);
+    font-weight: 500;
+}
+.header__nav a{
+    padding: .25em .6em;
+    border-radius: .35em;
+    transition: background .2s, color .2s;
+}
+.header__nav a:hover{ color: #fff; }
+.nav--julie{ color: var(--azul); }
+.nav--mariana{ color: var(--rosa); }
+.nav--mayte{ color: var(--vermelho); }
+.nav--pedro{ color: var(--verde); }
+.nav--julie:hover{ background: var(--azul); }
+.nav--mariana:hover{ background: var(--rosa); }
+.nav--mayte:hover{ background: var(--vermelho); }
+.nav--pedro:hover{ background: var(--verde); }
+
+/* ===== HERO ===== */
+.hero{
+    position: relative;
+    min-height: calc(var(--u) * 58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--creme) url("../images-home/fundo-primeira-pagina.jpeg") center / cover no-repeat;
+}
+.hero__titulo{ position: relative; z-index: 2; text-align: center; padding-top: calc(var(--u) * 4); }
+.hero h1{ display: flex; flex-direction: column; line-height: 1; }
+.t-trabalho{
+    font-size: calc(var(--u) * 6);
+    font-weight: 700;
+    color: var(--rosa-escuro);
+    -webkit-text-stroke: calc(var(--u) * .25) #fff;
+    paint-order: stroke fill;
+    margin-bottom: calc(var(--u) * -.4);
+}
+.t-desenvolvimento{
+    font-size: calc(var(--u) * 9);
+    font-weight: 700;
+    background: linear-gradient(90deg, #0b4f8a, #1b8a3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: calc(var(--u) * .25) #fff;
+    paint-order: stroke fill;
+}
+.estrela--1{ top: calc(var(--u) * -1); left: 12%; }
+.estrela--2{ top: calc(var(--u) * 2.5); left: 4%; width: calc(var(--u) * 1.6); height: calc(var(--u) * 1.6); }
+.estrela--3{ top: 45%; right: -3%; width: calc(var(--u) * 1.8); height: calc(var(--u) * 1.8); }
+
+.hero__card{
+    position: absolute;
+    z-index: 3;
+    width: calc(var(--u) * 12);
+    height: calc(var(--u) * 12);
+    padding: calc(var(--u) * .5);
+    background: rgba(255, 255, 255, .35);
+    border: 2px solid rgba(255, 255, 255, .7);
+    border-radius: calc(var(--u) * 1.2);
+    backdrop-filter: blur(4px);
+}
+.hero__card img{ width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--u) * .9); }
+.hero__card--mayte{ top: 24%; left: 12%; transform: rotate(-7deg); }
+.hero__card--pedro{ top: 22%; right: 8%; transform: rotate(8deg); width: calc(var(--u) * 10); height: calc(var(--u) * 10); }
+.hero__card--mari{ bottom: 14%; left: 18%; transform: rotate(-8deg); }
+.hero__card--julie{ bottom: 10%; right: 20%; transform: rotate(8deg); }
+
+/* ===== SOBRE NÓS ===== */
+.sobre{
+    --lado: max(0px, calc((100% - var(--W)) / 2));
+    position: relative;
+    height: calc(var(--p) * 940);
+    overflow: hidden;
+    background: linear-gradient(180deg, #f6f1ef, var(--creme));
+}
+
+/* as imagens já vêm com a forma colorida, então são só posicionadas */
+.sobre__imagens{ position: absolute; inset: 0; }
+.sobre__img{ position: absolute; height: auto; max-width: none; }
+.sobre__img--mari{  left: var(--lado);                         top: calc(var(--p) * 129); width: calc(var(--p) * 350); }
+.sobre__img--mayte{ left: calc(var(--lado) + var(--p) * 405);  top: calc(var(--p) * 129); width: calc(var(--p) * 380); }
+.sobre__img--pedro{ left: calc(var(--lado) + var(--p) * -39);  top: calc(var(--p) * 482); width: calc(var(--p) * 400); }
+.sobre__img--julie{ left: calc(var(--lado) + var(--p) * 396);  top: calc(var(--p) * 457); width: calc(var(--p) * 400); }
+
+.sobre__texto{
+    position: absolute;
+    top: 50%;
+    left: calc(var(--lado) + var(--p) * 830);
+    transform: translateY(-50%);
+    width: calc(var(--p) * 560);
+    color: #4a4a4a;
+}
+.sobre h2{ display: flex; align-items: flex-end; line-height: 1; margin-bottom: calc(var(--p) * 26); }
+.sobre__verde{
     font-family: var(--fonte-1);
-    font-weight: 400;
+    font-weight: 700;
+    font-size: calc(var(--p) * 108);
+    color: var(--lima);
+    -webkit-text-stroke: calc(var(--p) * 4) #fff;
+    paint-order: stroke fill;
+}
+.sobre__nos{
+    position: relative;
+    margin: 0 0 calc(var(--p) * 12) calc(var(--p) * 18);
+    font-family: var(--fonte-2);
+    font-weight: 800;
+    font-size: calc(var(--p) * 62);
+    color: var(--rosa-escuro);
+}
+.sobre__tira{
+    position: absolute;
+    top: calc(var(--p) * -34);
+    right: calc(var(--p) * -50);
+    width: calc(var(--p) * 56);
+    height: auto;
+}
+.sobre p{
+    font-size: calc(var(--p) * 25);
+    line-height: 1.35;
+    margin-bottom: calc(var(--p) * 46);
+}
+.sobre .btn--sobre{
+    background: linear-gradient(90deg, #e0215f, #c4155a);
+    color: #fff;
+    font-size: calc(var(--p) * 24);
+    padding: calc(var(--p) * 16) calc(var(--p) * 34);
+    gap: calc(var(--p) * 16);
+}
+.sobre .btn--sobre span{ font-size: calc(var(--p) * 32); }
+
+/* ===== BOTÕES ===== */
+.btn{
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--u) * .8);
+    padding: calc(var(--u) * .7) calc(var(--u) * 1.6);
+    border-radius: 999px;
+    font-family: var(--fonte-2);
+    font-size: calc(var(--u) * 1.1);
+    font-weight: 700;
+    transition: transform .2s, filter .2s;
+}
+.btn:hover{ transform: scale(1.05); filter: brightness(1.05); }
+.btn span{ font-size: calc(var(--u) * 1.5); line-height: 1; }
+.btn--rosa{ background: var(--rosa-escuro); color: #fff; }
+.btn--branco{ background: #fff; color: #333; }
+.btn--lima{ background: var(--lima); color: #1d4d10; }
+.btn--ciano{ background: var(--ciano); color: #fff; }
+
+/* ===== PERFIS ===== */
+.perfil{
+    --lado: max(0px, calc((100% - var(--W)) / 2));
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: calc(var(--p) * 1000);
+    padding-left: calc(var(--lado) + var(--p) * 14);
+    padding-right: calc(var(--lado) + var(--p) * 37);
+    overflow: hidden;
+}
+.perfil--pedro, .perfil--julie{
+    padding-left: calc(var(--lado) + var(--p) * 118);
+    padding-right: calc(var(--lado) + var(--p) * 14);
+}
+
+.perfil--mariana{ background: var(--rosa);     --cor-nome: #f9b6cf; border-radius: calc(var(--p) * 20) calc(var(--p) * 20) 0 0; }
+.perfil--pedro{   background: var(--verde);    --cor-nome: var(--lima); border-radius: 0 0 calc(var(--p) * 20) calc(var(--p) * 20); margin-bottom: calc(var(--p) * 20); }
+.perfil--mayte{   background: var(--vermelho); --cor-nome: #f58aa4; border-radius: calc(var(--p) * 20) calc(var(--p) * 20) 0 0; }
+.perfil--julie{   background: var(--azul);     --cor-nome: var(--ciano); border-radius: 0 0 calc(var(--p) * 20) calc(var(--p) * 20); }
+
+/* linhas decorativas nas pontas */
+.perfil::before, .perfil::after{
+    content: "";
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: calc(var(--p) * 380);
+    height: calc(var(--p) * 380);
+    background: url("../images-home/linhas.png") no-repeat center / contain;
+    opacity: .4;
+    pointer-events: none;
+}
+.perfil--mariana::before{ display: block; top: calc(var(--p) * -70); left: calc(var(--p) * -40); }
+.perfil--mariana::after, .perfil--mayte::after{ display: block; right: calc(var(--p) * -40); bottom: calc(var(--p) * -10); }
+.perfil--pedro::after, .perfil--julie::after{ display: block; left: calc(var(--p) * -40); bottom: 0; }
+
+.perfil--pedro .perfil__estrela, .perfil--julie .perfil__estrela{
+    right: auto;
+    left: calc(var(--p) * 12);
+    top: calc(var(--p) * 50);
+}
+
+/* imagem do personagem: o arco já vem nela.
+   A parte de baixo (arredondada) é empurrada para fora da seção. */
+.perfil__moldura{
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    align-self: flex-end;
+    height: calc(var(--p) * 1150);
+    margin-bottom: calc(var(--p) * -330);
+    line-height: 0;
+}
+.perfil__moldura img{
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+.perfil--julie .perfil__moldura{
+    width: calc(var(--p) * 600);
+    height: auto;
+    margin-bottom: 0;
+}
+.perfil--julie .perfil__moldura img{
+    width: 100%;
+    height: auto;
+}
+
+/* texto */
+.perfil__texto{
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    width: calc(var(--p) * 536);
+}
+.perfil h3{ line-height: .9; margin-bottom: calc(var(--p) * 18); }
+.conheca{
+    font-family: var(--fonte-2);
+    font-weight: 700;
+    font-size: calc(var(--p) * 60);
+    color: #fff;
+    vertical-align: middle;
+}
+.mini{
+    display: inline-block;
+    width: calc(var(--p) * 72);
+    height: calc(var(--p) * 72);
+    object-fit: cover;
+    border: calc(var(--p) * 3) solid #fff;
+    border-radius: calc(var(--p) * 16);
+    vertical-align: middle;
+    margin-left: calc(var(--p) * 12);
+}
+.nome{
+    font-family: var(--fonte-1);
+    font-weight: 700;
+    font-size: calc(var(--p) * 80);
+    color: var(--cor-nome);
+    white-space: nowrap;
+}
+.perfil--julie .nome{ font-size: calc(var(--p) * 66); }
+.perfil p{
+    font-size: calc(var(--p) * 20);
+    line-height: 1.3;
+    margin-bottom: calc(var(--p) * 28);
+}
+.perfil .btn{
+    font-size: calc(var(--p) * 17);
+    padding: calc(var(--p) * 10) calc(var(--p) * 22);
+    gap: calc(var(--p) * 10);
+}
+.perfil .btn span{ font-size: calc(var(--p) * 24); }
+
+/* ===== ONDULAÇÃO (só entre Mariana/Pedro e Maytê/Julie) ===== */
+.onda{
+    position: relative;
+    z-index: 5;
+    height: calc(var(--p) * 257);
+    margin: calc(var(--p) * -103) 0 calc(var(--p) * -154);
+    background: url("../images-home/ondulacao.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px){
+    :root{ --u: 2.4vw; }
+    .header{ --h: 94vw; height: 14vw; }
+    .header__logo{ flex-basis: 24%; }
+    .header__nav{ font-size: 3.2vw; }
+    .hero__card{ width: calc(var(--u) * 10); height: calc(var(--u) * 10); }
+    .hero__card--pedro{ width: calc(var(--u) * 8); height: calc(var(--u) * 8); }
+    .t-trabalho{ font-size: 9vw; }
+    .t-desenvolvimento{ font-size: 12vw; }
+    .sobre{ height: auto; padding: 14vw 7vw; text-align: center; }
+    .sobre__imagens{ position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; margin-bottom: 8vw; }
+    .sobre__img{ position: static; width: 100%; }
+    .sobre__texto{ position: static; transform: none; width: 100%; }
+    .sobre h2{ justify-content: center; }
+    .sobre__verde{ font-size: 18vw; }
+    .sobre__nos{ font-size: 10vw; }
+    .sobre__tira{ width: 9vw; top: -5vw; right: -8vw; }
+    .sobre p{ font-size: 4vw; }
+    .sobre .btn--sobre{ font-size: 3.8vw; padding: 3vw 7vw; }
+    .perfil, .perfil--pedro, .perfil--julie{
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        padding: 16vw 7vw 0;
+        gap: 6vw;
+    }
+    .perfil__texto{ order: 1; width: 100%; align-self: auto; }
+    .perfil__moldura{ order: 2; align-self: center; height: 125vw; margin-bottom: -33vw; }
+    .perfil--julie .perfil__moldura{ width: 86vw; height: auto; margin-bottom: 0; }
+    .conheca{ font-size: 9vw; }
+    .mini{ width: 11vw; height: 11vw; border-radius: 2.5vw; }
+    .nome{ font-size: 14vw; }
+    .perfil--julie .nome{ font-size: 11vw; }
+    .perfil p{ font-size: 3.8vw; margin-bottom: 5vw; }
+    .perfil .btn{ font-size: 3.4vw; padding: 2vw 5vw; }
+    .perfil__estrela{ width: 14vw; height: 14vw; }
+    .onda{ height: 40vw; margin: -16vw 0 -24vw; }
 }
