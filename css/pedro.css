@@ -689,12 +689,12 @@ header {
     width: 489.03px;
     object-fit: contain;
     position: absolute;
-    top: -70px;
-    right: -40px;
-    z-index: 5;
+    top: 0;
+    right: -50px;
+    transform: translateY(-120px);
+    z-index: 6;
     pointer-events: none;
 }
-
 /* Container dos cards com a mancha verde */
 .lugares-container-cards {
     position: relative;
@@ -726,12 +726,138 @@ header {
     width: 100%;
 }
 
-.card-lugar-img {
+/* Cards de lugares (HTML em vez de imagem) */
+.card-lugar {
     width: 465px;
-    height: 615.7px;
-    object-fit: cover;
+    background-color: var(--fundo-card-claro);
     border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
+/* Faixa verde do topo */
+/* ===== LUGARES: título acima da mancha ===== */
+.lugares-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 4;                 /* título fica por cima da mancha */
+}
+
+.titulo-icone-lugares {
+    position: relative;
+    z-index: 4;
+}
+
+/* Avião: sobrepõe só o canto superior direito do card */
+.img-aviao {
+    width: 489.03px;
+    object-fit: contain;
+    position: absolute;
+    top: -60px;
+    right: -50px;
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* Mancha verde atrás dos cards (não sobe mais sobre o título) */
+.mancha-verde-lugares {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1260px;
+    max-width: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.lugares-container-cards {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;            /* espaço para a mancha respirar */
+    margin-top: 10px;
+}
+
+/* ===== CARDS ===== */
+.card-lugar {
+    width: 465px;
+    background-color: var(--fundo-card-claro);
+    border: 3px solid var(--verde-escuro);
+    border-radius: 28px;
+    padding: 10px 10px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Foto no topo */
+.card-lugar-foto {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Botão verde sobrepondo a base da foto */
+.card-lugar-titulo {
+    position: relative;
+    z-index: 2;
+    margin-top: -34px;
+    height: 64px;
+    background-color: var(--verde-pill);
+    color: #FFFFFF;
+    font-family: var(--fonte-2);
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lista de cidades */
+.lista-lugares {
+    list-style: none;
+    padding: 6px 14px 0;
+}
+
+.lista-lugares li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 12px;
+    border-bottom: 1px solid #9fb8a6;
+    font-size: 28px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.lista-lugares li:last-child {
+    border-bottom: none;
+}
+
+.lista-lugares a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.lista-lugares a:hover {
+    transform: translateX(6px);
+}
+
+.seta-lugar {
+    width: 20px;
+    height: auto;
+}
+
 
 /* Estrelas no canto inferior esquerdo */
 .brilho-lugares-esq {
@@ -783,4 +909,10 @@ header {
     width: 837px;
     height: 229px;
     object-fit: contain;
+}
+
+header a,
+.nav-nome,
+.pedro-btn {
+    text-decoration: none;
 }

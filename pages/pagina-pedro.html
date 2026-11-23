@@ -11,13 +11,15 @@
     <!-- HEADER / NAVEGAÇÃO (1255x76, risco 4px, espaçamento equilibrado) -->
     <header>
         <div class="nav-glass">
-            <img src="../assets/logo.svg" alt="Logo" class="nav-logo">
+            <a href="../index.html">
+                <img src="../assets/logo.svg" alt="Logo" class="nav-logo">
+            </a>
             <span class="nav-divisor"></span>
             <nav class="nav-itens">
-                <span class="nav-nome julie">Julie</span>
-                <span class="nav-nome mariana">Mariana</span>
-                <span class="nav-nome mayte">Maytê</span>
-                <span class="pedro-btn">Pedro</span>
+                <a href="pagina-julie.html" class="nav-nome julie">Julie</a>
+                <a href="pagina-mariana.html" class="nav-nome mariana">Mariana</a>
+                <a href="pagina-mayte.html" class="nav-nome mayte">Maytê</a>
+                <a href="pagina-pedro.html" class="pedro-btn">Pedro</a>
             </nav>
         </div>
     </header>
@@ -209,9 +211,61 @@
             <div class="lugares-container-cards">
                 <img src="../assets/pedro-mancha-verde.png" alt="" class="mancha-verde-lugares">
                 <div class="grade-lugares">
-                    <img src="../assets/pedro-javisitei.png" alt="Já visitei" class="card-lugar-img">
-                    <img src="../assets/pedro-querovisitar.png" alt="Quero visitar" class="card-lugar-img">
+
+                    <!-- Já visitei -->
+                    <div class="card-lugar">
+                        <img src="../assets/cataratas.png" alt="Cataratas do Iguaçu" class="card-lugar-foto">
+                        <h3 class="card-lugar-titulo">Já visitei</h3>
+                        <ul class="lista-lugares">
+                            <li>
+                                <span>Foz do Iguaçu</span>
+                                <a href="https://pt.wikipedia.org/wiki/Foz_do_Igua%C3%A7u" target="_blank" rel="noopener" aria-label="Ver Foz do Iguaçu">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                            <li>
+                                <span>Puerto Iguazú</span>
+                                <a href="https://pt.wikipedia.org/wiki/Porto_Igua%C3%A7u" target="_blank" rel="noopener" aria-label="Ver Puerto Iguazú">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                            <li>
+                                <span>Penha</span>
+                                <a href="https://pt.wikipedia.org/wiki/Penha_(Santa_Catarina)" target="_blank" rel="noopener" aria-label="Ver Penha">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Quero visitar -->
+                    <div class="card-lugar">
+                        <img src="../assets/machu-pichu.png" alt="Machu Picchu" class="card-lugar-foto">
+                        <h3 class="card-lugar-titulo">Quero visitar</h3>
+                        <ul class="lista-lugares">
+                            <li>
+                                <span>Barreirinhas</span>
+                                <a href="https://pt.wikipedia.org/wiki/Barreirinhas" target="_blank" rel="noopener" aria-label="Ver Barreirinhas">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                            <li>
+                                <span>Machu Picchu</span>
+                                <a href="https://pt.wikipedia.org/wiki/Machu_Picchu" target="_blank" rel="noopener" aria-label="Ver Machu Pichu">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                            <li>
+                                <span>Roma</span>
+                                <a href="https://pt.wikipedia.org/wiki/Roma" target="_blank" rel="noopener" aria-label="Ver Roma">
+                                    <img src="../assets/seta.svg" alt="" class="seta-lugar">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+
                 <img src="../assets/pedro-brilho3.png" alt="" class="brilho-lugares-esq">
             </div>
         </section>
