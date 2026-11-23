@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-/* --- Fontes Customizadas --- */
 @font-face {
     font-family: 'tommy';
     src: url("../fonts/tommy-font/tommy-font.ttf") format('truetype');
@@ -17,10 +16,9 @@
     font-style: normal;
 }
 
-/* --- Variáveis Globais (Figma Node 187:280) --- */
 :root {
     --fundo-pagina: #F5F0EC;
-    --verde-escuro: #004D32;       /* Verde 004D32 */
+    --verde-escuro: #004D32;
     --verde-medio: #258f43;
     --verde-pill: #289146;
     --verde-limao: #c8f53c;
@@ -33,7 +31,6 @@
     --fonte-2: 'DM Sans', sans-serif;
 }
 
-/* Sem sombras em nenhum elemento */
 * {
     margin: 0;
     padding: 0;
@@ -60,9 +57,6 @@ img {
     color: var(--verde-escuro);
 }
 
-/* ==========================================================
-   1. CABEÇALHO / GLASS EFFECT (1255x76, risco 4x56)
-   ========================================================== */
 header {
     width: 100%;
     display: flex;
@@ -116,7 +110,6 @@ header {
 .nav-nome.mariana { color: #e9508d; }
 .nav-nome.mayte { color: #d13b53; }
 
-/* Botão Pedro: 156x52, corner radius 10, semibold */
 .pedro-btn {
     width: 156px;
     height: 52px;
@@ -132,9 +125,6 @@ header {
     line-height: 1;
 }
 
-/* ==========================================================
-   2. HERO / APRESENTAÇÃO
-   ========================================================== */
 .hero-secao {
     width: 1255px;
     margin: 40px auto 40px;
@@ -174,7 +164,6 @@ header {
     align-items: flex-start;
 }
 
-/* "Pedro": DM Sans 900 (black) 99.44px */
 .texto-pedro {
     font-family: var(--fonte-2);
     font-size: 99.44px;
@@ -183,14 +172,12 @@ header {
     line-height: 0.95;
 }
 
-/* Risco embaixo de Pedro: 266.5px x 14.7px */
 .pedro-risco {
     width: 266.5px;
     height: 14.7px;
     margin-top: -6px;
 }
 
-/* "Almeida": 53.06px Medium (500) */
 .texto-almeida {
     font-family: var(--fonte-2);
     font-size: 53.06px;
@@ -210,7 +197,6 @@ header {
     margin-top: 14px;
 }
 
-/* "Rufino": 557.2px x 156.8px no Figma */
 .badge-rufino {
     background-color: var(--verde-limao);
     color: var(--verde-escuro);
@@ -225,7 +211,6 @@ header {
     justify-content: center;
 }
 
-/* Descrição: 32.63px, max-width 583px */
 .hero-descricao {
     font-size: 32.63px;
     line-height: 1.35;
@@ -234,7 +219,6 @@ header {
     max-width: 583px;
 }
 
-/* Imagem Início (744x527) e Brilho (119x160) */
 .hero-imagem-wrapper {
     position: relative;
     width: 744px;
@@ -257,7 +241,6 @@ header {
     z-index: 5;
 }
 
-/* Quadriculado: 202.75x67.75 */
 .quadriculado-hero {
     position: absolute;
     bottom: -25px;
@@ -266,9 +249,6 @@ header {
     height: 67.75px;
 }
 
-/* ==========================================================
-   3. BORDAS EXTERIORES DAS SEÇÕES VERDES (PEDRO-CURVAS2)
-   ========================================================== */
 .curva-borda-exterior {
     width: 100%;
     display: block;
@@ -302,9 +282,6 @@ header {
     margin: 0 auto;
 }
 
-/* ==========================================================
-   4. SOBRE MIM (EXATO DO FIGMA)
-   ========================================================== */
 .titulo-sobre {
     font-family: var(--fonte-1);
     font-size: 96px;
@@ -328,14 +305,12 @@ header {
     max-width: 660px;
 }
 
-/* Linha divisória vertical: 426px */
 .divisor-vertical-branco {
     width: 2px;
     height: 426px;
     background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* Caixa Lateral: 488px x 423px */
 .card-dados-wrapper {
     position: relative;
     width: 488px;
@@ -343,7 +318,6 @@ header {
     flex-shrink: 0;
 }
 
-/* Raio amarelo do card: 86x91 */
 .raio-sobre-card {
     position: absolute;
     top: -30px;
@@ -389,7 +363,6 @@ header {
     line-height: 1.3;
 }
 
-/* Pills inferiores: altura 85px com círculo de 85px */
 .caracteristicas-linha {
     display: flex;
     justify-content: space-between;
@@ -433,9 +406,6 @@ header {
     white-space: nowrap;
 }
 
-/* ==========================================================
-   5. FAVORITOS (Fonte 130.31px)
-   ========================================================== */
 .favoritos-secao {
     width: 1255px;
     margin: 60px auto 30px;
@@ -467,7 +437,6 @@ header {
     object-fit: contain;
 }
 
-/* Título Favoritos em 130.31px */
 .titulo-favoritos {
     font-family: var(--fonte-1);
     font-size: 130.31px;
@@ -476,7 +445,6 @@ header {
     line-height: 1;
 }
 
-/* Risco 336.5px embaixo de Favoritos */
 .risco-amarelo-favoritos {
     width: 336.5px;
     height: 24px;
@@ -491,7 +459,6 @@ header {
     margin-top: 14px;
 }
 
-/* Pedro-favoritos: 606.3px x 298px */
 .img-ilustra-favoritos {
     width: 606.3px;
     height: 298px;
@@ -499,7 +466,6 @@ header {
     margin-top: -30px;
 }
 
-/* Cards (398x469px) */
 .grade-favoritos {
     display: flex;
     justify-content: space-between;
@@ -580,7 +546,6 @@ header {
     gap: 14px;
 }
 
-/* Bolinhas redondas da lista */
 .bullet-bolinha {
     width: 14px;
     height: 14px;
@@ -590,7 +555,6 @@ header {
     margin-top: 6px;
 }
 
-/* Cantores e livros com as imagens do Figma */
 .midia-favoritos {
     padding: 20px;
     display: flex;
@@ -638,7 +602,6 @@ header {
     z-index: 3;
 }
 
-/* Curva após Favoritos */
 .curva-favoritos-lugares {
     width: 100%;
     display: block;
@@ -646,9 +609,6 @@ header {
     pointer-events: none;
 }
 
-/* ==========================================================
-   6. LUGARES (Fonte 130.31px, Gap 52px, Avião sobrepondo)
-   ========================================================== */
 .lugares-secao {
     width: 1255px;
     margin: 10px auto 40px;
@@ -663,7 +623,6 @@ header {
     position: relative;
 }
 
-/* Ícone de localização e Título Lugares lado a lado */
 .titulo-icone-lugares {
     display: flex;
     align-items: center;
@@ -684,7 +643,6 @@ header {
     line-height: 1;
 }
 
-/* Avião com 489.03px de largura sobrepondo a mancha verde e os cards */
 .img-aviao {
     width: 489.03px;
     object-fit: contain;
@@ -695,7 +653,7 @@ header {
     z-index: 6;
     pointer-events: none;
 }
-/* Container dos cards com a mancha verde */
+
 .lugares-container-cards {
     position: relative;
     width: 100%;
@@ -716,7 +674,6 @@ header {
     pointer-events: none;
 }
 
-/* Gap de 52px exato do Figma (756 - (239+465) = 52px) */
 .grade-lugares {
     position: relative;
     z-index: 2;
@@ -726,7 +683,6 @@ header {
     width: 100%;
 }
 
-/* Cards de lugares (HTML em vez de imagem) */
 .card-lugar {
     width: 465px;
     background-color: var(--fundo-card-claro);
@@ -736,15 +692,13 @@ header {
     flex-direction: column;
 }
 
-/* Faixa verde do topo */
-/* ===== LUGARES: título acima da mancha ===== */
 .lugares-topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     position: relative;
-    z-index: 4;                 /* título fica por cima da mancha */
+    z-index: 4;
 }
 
 .titulo-icone-lugares {
@@ -752,7 +706,6 @@ header {
     z-index: 4;
 }
 
-/* Avião: sobrepõe só o canto superior direito do card */
 .img-aviao {
     width: 489.03px;
     object-fit: contain;
@@ -763,7 +716,6 @@ header {
     pointer-events: none;
 }
 
-/* Mancha verde atrás dos cards (não sobe mais sobre o título) */
 .mancha-verde-lugares {
     position: absolute;
     top: 50%;
@@ -781,11 +733,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;            /* espaço para a mancha respirar */
+    padding: 60px 0;
     margin-top: 10px;
 }
 
-/* ===== CARDS ===== */
 .card-lugar {
     width: 465px;
     background-color: var(--fundo-card-claro);
@@ -796,7 +747,6 @@ header {
     flex-direction: column;
 }
 
-/* Foto no topo */
 .card-lugar-foto {
     width: 100%;
     height: 250px;
@@ -804,7 +754,6 @@ header {
     border-radius: 20px 20px 0 0;
 }
 
-/* Botão verde sobrepondo a base da foto */
 .card-lugar-titulo {
     position: relative;
     z-index: 2;
@@ -821,7 +770,6 @@ header {
     justify-content: center;
 }
 
-/* Lista de cidades */
 .lista-lugares {
     list-style: none;
     padding: 6px 14px 0;
@@ -859,7 +807,6 @@ header {
 }
 
 
-/* Estrelas no canto inferior esquerdo */
 .brilho-lugares-esq {
     position: absolute;
     bottom: 20px;
@@ -868,9 +815,6 @@ header {
     z-index: 3;
 }
 
-/* ==========================================================
-   7. HABILIDADES (100% LARGURA)
-   ========================================================== */
 .habilidades-cabecalho h2.titulo-habilidades {
     font-family: var(--fonte-1);
     font-size: 80px;

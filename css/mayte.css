@@ -368,13 +368,11 @@ main {
         top: -1rem;
     }
 
-    /* Cor de cada nome no menu */
     .link-julie   { color: #4a63e7; }
     .link-mariana { color: #e8548a; }
     .link-mayte   { color: #c8344f; }
     .link-pedro   { color: #2a9248; }
 
-    /* Item ativo: fundo preenchido com a cor da pessoa e texto branco */
     .menu-link.active {
         color: #fff;
         font-weight: 600;

@@ -56,8 +56,6 @@ a {
   overflow-x: clip;
 }
 
-/* Aumenta a pagina inteira em telas maiores.
-   zoom: 1.5 deixa tudo 1.5x maior, sem mexer nos px do resto do codigo. */
 @media (min-width: 1100px) {
   .page {
     zoom: 1.3;
@@ -89,11 +87,6 @@ a {
 }
 
 
-
-
-/* ===== POSICAO DE CADA ELEMENTO ===== */
-
-/* --- 1. HERO --- */
 .checker {
   position: absolute;
   left: 0px;
@@ -250,7 +243,6 @@ a {
   z-index: 5;
 }
 
-/* --- 2. SOBRE MIM --- */
 .cupcake {
   position: absolute;
   left: -2px;
@@ -378,7 +370,6 @@ a {
   top: 485px;
 }
 
-/* --- 3. HOBBIES --- */
 .hobbies-pre {
   position: absolute;
   left: 33px;
@@ -577,7 +568,6 @@ a {
   z-index: 7;
 }
 
-/* --- 4. VIAGENS --- */
 .map {
   position: absolute;
   left: 50px;
@@ -783,7 +773,6 @@ a {
   width: 196px;
 }
 
-/* --- 5. HABILIDADES --- */
 .skills-head {
   position: absolute;
   left: 20px;
@@ -855,13 +844,11 @@ a {
 }
 
 
-/* ===== ESTILO DOS COMPONENTES ===== */
 section {
   position: relative;
 }
 
 
-/* ---------- elementos decorativos em CSS ---------- */
 .burst {
   display: block;
   aspect-ratio: 1;
@@ -890,7 +877,6 @@ section {
 }
 
 
-/* ---------- títulos ---------- */
 .title-grad {
   font-family: "Tommy", "Fraunces", Georgia, serif;
   font-weight: 900;
@@ -946,7 +932,6 @@ section {
   text-shadow: 0 4px 0 #1aa7c9
 }
 
-/* ---------- navegação ---------- */
 .topbar {
   position: absolute;
   z-index: 20;
@@ -1028,9 +1013,6 @@ section {
 }
 
 
-/* ==========================================================
-   1. HERO
-   ========================================================== */
 .hero {
   height: 590px;
   background: #e9e1df;
@@ -1148,9 +1130,6 @@ section {
 }
 
 
-/* ==========================================================
-   2. SOBRE MIM
-   ========================================================== */
 .about {
   height: 625px;
   background: #0a47c4;
@@ -1274,9 +1253,6 @@ section {
   object-fit: contain
 }
 
-/* ==========================================================
-   3. HOBBIES
-   ========================================================== */
 .hobbies {
   height: 565px;
   background: #f4ebe7;
@@ -1376,9 +1352,6 @@ section {
 }
 
 
-/* ==========================================================
-   4. VIAGENS
-   ========================================================== */
 .trips {
   height: 583px;
   background: #0a47c4;
@@ -1460,9 +1433,6 @@ section {
 }
 
 
-/* ==========================================================
-   5. HABILIDADES
-   ========================================================== */
 .skills {
   height: 560px;
   background: #f4ebe7;
@@ -1481,7 +1451,6 @@ section {
   transform: rotate(-2deg)
 }
 
-/* Habilidades: título, linha e estrela na mesma linha */
 .skills__head {
   display: flex;
   align-items: center;
@@ -1507,7 +1476,6 @@ section {
 }
 
 
-/* título menor em Habilidades */
 .skills__head .title-grad {
   font-size: 74px;
 }
@@ -1517,7 +1485,6 @@ section {
 }
 
 
-/* janela em CSS (nítida em qualquer resolução) */
 .win {
   border-radius: 24px;
   background: linear-gradient(160deg, #0a2d9e, #0b3bb8);

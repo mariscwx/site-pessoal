@@ -20,8 +20,6 @@
     --fonte-1: 'tommy', serif;
     --fonte-2: 'DM Sans', sans-serif;
 
-    /* 1w = 1% da largura da página (a página ocupa toda a largura do viewport).
-       Todas as medidas abaixo usam w, então as proporções são sempre as mesmas. */
     --w: 1vw;
 
     --rosa: #fd4a7d;
@@ -71,7 +69,6 @@ img{ display: block; max-width: 100%; }
     background: var(--bege);
 }
 
-/* ---------- HEADER ---------- */
 .topo{
     position: relative;
     z-index: 10;
@@ -121,7 +118,6 @@ img{ display: block; max-width: 100%; }
     color: #fff;
 }
 
-/* ---------- TÍTULOS ---------- */
 .titulo-secao{
     line-height: .9;
     font-size: calc(var(--w) * 11.5);
@@ -131,7 +127,6 @@ img{ display: block; max-width: 100%; }
 .titulo-secao--creme{ color: var(--creme); }
 .titulo-secao--rosa{ color: var(--rosa-titulo); }
 
-/* ---------- INÍCIO ---------- */
 .inicio{
     position: relative;
     z-index: 1;
@@ -160,7 +155,6 @@ img{ display: block; max-width: 100%; }
 
 .inicio__descricao strong{ font-weight: 700; }
 
-/* ---------- SOBRE MIM ---------- */
 .sobre{
     position: relative;
     z-index: 2;
@@ -227,7 +221,6 @@ img{ display: block; max-width: 100%; }
     border: calc(var(--w) * .6) solid #ff86ad;
 }
 
-/* ---------- FAVORITOS ---------- */
 .favoritos{
     position: relative;
     z-index: 1;
@@ -314,7 +307,6 @@ img{ display: block; max-width: 100%; }
     margin: calc(var(--w) * 1) auto 0;
 }
 
-/* ---------- LUGARES ---------- */
 .lugares{
     position: relative;
     z-index: 2;
@@ -384,6 +376,5 @@ img{ display: block; max-width: 100%; }
     z-index: 3;
 }
 
-/* segunda linha de fotos levemente deslocada, como no layout */
 .lugar:nth-of-type(3){ margin-left: calc(var(--w) * 5.5); width: calc(var(--w) * 38.5); }
 .lugar:nth-of-type(4){ margin-right: calc(var(--w) * 6); width: calc(var(--w) * 40); }

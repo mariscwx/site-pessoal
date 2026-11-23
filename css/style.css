@@ -20,10 +20,8 @@
     --fonte-1: 'tommy', serif;
     --fonte-2: 'DM Sans', sans-serif;
 
-    /* unidade base: 0.8% da largura da tela, no máximo 12px */
     --u: min(0.8vw, 12px);
 
-    /* unidade dos perfis: 1px do Figma (1440px de largura) */
     --W: min(100vw, 1440px);
     --p: calc(var(--W) / 1440);
 
@@ -52,7 +50,6 @@ h2, h3{ font-weight: 400; }
 img{ display: block; max-width: 100%; }
 a{ text-decoration: none; }
 
-/* ===== ESTRELAS ===== */
 .estrela{
     position: absolute;
     width: calc(var(--u) * 3);
@@ -71,7 +68,6 @@ a{ text-decoration: none; }
     clip-path: polygon(100% 50%, 74% 60%, 85.4% 85.4%, 60% 74%, 50% 100%, 40% 74%, 14.6% 85.4%, 26% 60%, 0 50%, 26% 40%, 14.6% 14.6%, 40% 26%, 50% 0, 60% 26%, 85.4% 14.6%, 74% 40%);
 }
 
-/* ===== HEADER ===== */
 .header{
     --h: min(88vw, 1200px);
     position: fixed;
@@ -89,7 +85,6 @@ a{ text-decoration: none; }
     border-radius: calc(var(--h) * .014);
 }
 
-/* logo centralizada na área da esquerda, com a linha divisória */
 .header__logo{
     flex: 0 0 25.5%;
     display: flex;
@@ -104,7 +99,6 @@ a{ text-decoration: none; }
     height: auto;
 }
 
-/* links espalhados igualmente */
 .header__nav{
     flex: 1;
     display: flex;
@@ -129,7 +123,6 @@ a{ text-decoration: none; }
 .nav--mayte:hover{ background: var(--vermelho); }
 .nav--pedro:hover{ background: var(--verde); }
 
-/* ===== HERO ===== */
 .hero{
     position: relative;
     min-height: calc(var(--u) * 58);
@@ -180,7 +173,6 @@ a{ text-decoration: none; }
 .hero__card--mari{ bottom: 14%; left: 18%; transform: rotate(-8deg); }
 .hero__card--julie{ bottom: 10%; right: 20%; transform: rotate(8deg); }
 
-/* ===== SOBRE NÓS ===== */
 .sobre{
     --lado: max(0px, calc((100% - var(--W)) / 2));
     position: relative;
@@ -189,7 +181,6 @@ a{ text-decoration: none; }
     background: linear-gradient(180deg, #f6f1ef, var(--creme));
 }
 
-/* as imagens já vêm com a forma colorida, então são só posicionadas */
 .sobre__imagens{ position: absolute; inset: 0; }
 .sobre__img{ position: absolute; height: auto; max-width: none; }
 .sobre__img--mari{  left: var(--lado);                         top: calc(var(--p) * 129); width: calc(var(--p) * 350); }
@@ -243,7 +234,6 @@ a{ text-decoration: none; }
 }
 .sobre .btn--sobre span{ font-size: calc(var(--p) * 32); }
 
-/* ===== BOTÕES ===== */
 .btn{
     display: inline-flex;
     align-items: center;
@@ -262,7 +252,6 @@ a{ text-decoration: none; }
 .btn--lima{ background: var(--lima); color: #1d4d10; }
 .btn--ciano{ background: var(--ciano); color: #fff; }
 
-/* ===== PERFIS ===== */
 .perfil{
     --lado: max(0px, calc((100% - var(--W)) / 2));
     position: relative;
@@ -284,7 +273,6 @@ a{ text-decoration: none; }
 .perfil--mayte{   background: var(--vermelho); --cor-nome: #f58aa4; border-radius: calc(var(--p) * 20) calc(var(--p) * 20) 0 0; }
 .perfil--julie{   background: var(--azul);     --cor-nome: var(--ciano); border-radius: 0 0 calc(var(--p) * 20) calc(var(--p) * 20); }
 
-/* linhas decorativas nas pontas */
 .perfil::before, .perfil::after{
     content: "";
     display: none;
@@ -306,8 +294,6 @@ a{ text-decoration: none; }
     top: calc(var(--p) * 50);
 }
 
-/* imagem do personagem: o arco já vem nela.
-   A parte de baixo (arredondada) é empurrada para fora da seção. */
 .perfil__moldura{
     position: relative;
     z-index: 2;
@@ -333,7 +319,6 @@ a{ text-decoration: none; }
     height: auto;
 }
 
-/* texto */
 .perfil__texto{
     position: relative;
     z-index: 2;
@@ -378,7 +363,6 @@ a{ text-decoration: none; }
 }
 .perfil .btn span{ font-size: calc(var(--p) * 24); }
 
-/* ===== ONDULAÇÃO (só entre Mariana/Pedro e Maytê/Julie) ===== */
 .onda{
     position: relative;
     z-index: 5;
@@ -388,7 +372,6 @@ a{ text-decoration: none; }
     pointer-events: none;
 }
 
-/* ===== RESPONSIVO ===== */
 @media (max-width: 900px){
     :root{ --u: 2.4vw; }
     .header{ --h: 94vw; height: 14vw; }
