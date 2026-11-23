@@ -1,143 +1,244 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro - Site Pessoal</title>
+    <link rel="stylesheet" href="../css/pedro.css">
 </head>
 <body>
+
+    <!-- HEADER / NAVEGAÇÃO (1255x76, risco 4px, espaçamento equilibrado) -->
     <header>
-        <div>
-            <img src="../assets/logo.svg" alt="Logo">
-
-            <hr>
-
-            <p>Julie</p>
-            <p>Mariana</p>
-            <p>Maytê</p>
-            <p class="pedro-selecionado">Pedro</p>
+        <div class="nav-glass">
+            <img src="../assets/logo.svg" alt="Logo" class="nav-logo">
+            <span class="nav-divisor"></span>
+            <nav class="nav-itens">
+                <span class="nav-nome julie">Julie</span>
+                <span class="nav-nome mariana">Mariana</span>
+                <span class="nav-nome mayte">Maytê</span>
+                <span class="pedro-btn">Pedro</span>
+            </nav>
         </div>
     </header>
 
     <main>
 
-        <section>
-            <img src="../assets/pedro-brilho1.png" alt="">
+        <!-- SEÇÃO HERO / APRESENTAÇÃO -->
+        <section class="hero-secao">
+            <img src="../assets/pedro-brilho1.png" alt="" class="brilho-topo-esq">
 
-            <h1>Pedro Almeida Rufino</h1>
+            <div class="hero-conteudo">
+                <div class="hero-textos">
+                    <div class="hero-titulos">
+                        <div class="linha-pedro-almeida">
+                            <div class="pedro-wrapper">
+                                <span class="texto-pedro">Pedro</span>
+                                <img src="../assets/pedro-risco1.svg" alt="" class="pedro-risco">
+                            </div>
+                            <span class="texto-almeida">Almeida</span>
+                            <img src="../assets/super-pedro.svg" alt="" class="raios-doodle">
+                        </div>
 
-            <img src="../assets/super-pedro.svg" alt="">
+                        <div class="linha-rufino">
+                            <span class="badge-rufino">Rufino</span>
+                        </div>
+                    </div>
 
-            <p>
-                Uma <span class="bold">página pessoal</span> com
-                <span class="bold">meus</span> interesses,
-                curiosidades, lugares marcantes e habilidades.
-            </p>
-
-            <img src="../assets/pedro-brilho2.png" alt="">
-            <img src="../assets/pedro-inicio.png" alt="">
-            <img src="../assets/pedro-quadriculado.svg" alt="">
-        </section>
-
-        <section class="fundo-verde">
-
-            <h2>Sobre mim</h2>
-
-            <p>Sou uma pessoa calma e dificilmente fico bravo. Sou mais reservado, mas costumo conversar e resolver as coisas de forma amigável, buscando a melhor solução. Também sou organizado no dia a dia. Gosto muito de nadar e de montar LEGO que são meus hobbies favoritos.</p>
-
-            <hr>
-
-            <img src="../assets/super-pedro.svg" alt="Super Pedro">
-
-            <div>
-                <img src="../assets/pedro-pessoa.svg" alt="Pessoa">
-                <p>15 anos</p>
-
-                <hr>
-
-                <img src="../assets/pedro-data.svg" alt="Data de Nascimento">
-                <p>21/12/2010</p>
-
-                <hr>
-
-                <img src="../assets/pedro-local.svg" alt="Localização">
-                <p>Perto do Shopping Tietê e da Faculdade Anhanguera</p>
-            </div>
-
-            <div class="carac">
-                <div>
-                    <img src="../assets/pedro-carac1.svg" alt="Característica 1">
+                    <p class="hero-descricao">
+                        Uma <span class="bold">página pessoal</span> com
+                        <span class="bold">meus</span> interesses,
+                        curiosidades, lugares marcantes e habilidades.
+                    </p>
                 </div>
-                <p>Calmo e reservado</p>          
-            </div>
 
-            <div class="carac">
-                <div>
-                    <img src="../assets/pedro-carac2.svg" alt="Característica 2">
+                <!-- Imagem Início (744x527) com Brilho (119x160) Sobreposto -->
+                <div class="hero-imagem-wrapper">
+                    <img src="../assets/pedro-brlho2.png" alt="" class="brilho-sobre-imagem">
+                    <img src="../assets/pedro-inicio.png" alt="Pedro Início" class="img-pedro-inicio">
                 </div>
-                <p>Pensamento analítico</p>
             </div>
 
-            <div class="carac">
-                <div>
-                    <img src="../assets/pedro-carac3.svg" alt="Característica 3">
+            <img src="../assets/pedro-quadriculado.svg" alt="" class="quadriculado-hero">
+        </section>
+
+        <!-- BORDA EXTERIOR SUPERIOR (SOBRE MIM) -->
+        <img src="../assets/pedro-curvas2.png" alt="" class="curva-borda-exterior curva-topo">
+
+        <!-- SEÇÃO SOBRE MIM (FUNDO VERDE 100% LARGURA) -->
+        <section class="secao-full-verde">
+            <div class="conteudo-centralizado">
+                <h2 class="titulo-sobre">Sobre mim</h2>
+
+                <div class="sobre-grade">
+                    <p class="sobre-bio">
+                        Sou uma pessoa calma e dificilmente fico bravo. Sou mais reservado, mas costumo conversar e resolver as coisas de forma amigável, buscando a melhor solução. Também sou organizado no dia a dia. Gosto muito de nadar e de montar LEGO que são meus hobbies favoritos.
+                    </p>
+
+                    <div class="divisor-vertical-branco"></div>
+
+                    <!-- Caixa Lateral de Dados (488x423px) com Raio Amarelo Flutuante -->
+                    <div class="card-dados-wrapper">
+                        <img src="../assets/super-pedro.svg" alt="" class="raio-sobre-card">
+                        <div class="card-dados-pessoais">
+                            <div class="linha-dado">
+                                <img src="../assets/pedro-pessoa.svg" alt="Pessoa">
+                                <p>15 anos</p>
+                            </div>
+                            <hr>
+                            <div class="linha-dado">
+                                <img src="../assets/pedro-data.svg" alt="Data de Nascimento">
+                                <p>21/12/2010</p>
+                            </div>
+                            <hr>
+                            <div class="linha-dado">
+                                <img src="../assets/pedro-local.png" alt="Localização">
+                                <p>Perto do Shopping Tietê e da Faculdade Anhanguera</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>Criativo</p>
+
+                <!-- 3 Características (Pills de 85px de altura) -->
+                <div class="caracteristicas-linha">
+                    <div class="carac-pill pill-calmo">
+                        <div class="carac-circulo-icone">
+                            <img src="../assets/pedro-carac1.svg" alt="">
+                        </div>
+                        <p>Calmo e reservado</p>
+                    </div>
+
+                    <div class="carac-pill pill-analitico">
+                        <div class="carac-circulo-icone">
+                            <img src="../assets/pedro-carac2.svg" alt="">
+                        </div>
+                        <p>Pensamento analítco</p>
+                    </div>
+
+                    <div class="carac-pill pill-criativo">
+                        <div class="carac-circulo-icone">
+                            <img src="../assets/pedro-carac3.svg" alt="">
+                        </div>
+                        <p>Criativo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BORDA EXTERIOR INFERIOR (SOBRE MIM) -->
+        <img src="../assets/pedro-curvas2.png" alt="" class="curva-borda-exterior curva-baixo">
+
+        <!-- SEÇÃO FAVORITOS -->
+        <section class="favoritos-secao">
+            <div class="favoritos-topo">
+                <div class="favoritos-info-texto">
+                    <div class="titulo-wrapper-favoritos">
+                        <div class="titulo-linha">
+                            <img src="../assets/pedro-pasta.png" alt="Pasta" class="icone-secao">
+                            <h2 class="titulo-favoritos">Favoritos</h2>
+                        </div>
+                        <img src="../assets/pedro-risco2.svg" alt="" class="risco-amarelo-favoritos">
+                    </div>
+                    <p class="favoritos-subtexto">Coisas que eu gosto, curiosidades sobre mim e minhas músicas e livros preferidos.</p>
+                </div>
+                <!-- Ilustração Pedro-Favoritos (606.3x298px) -->
+                <img src="../assets/pedro-favoritos.png" alt="Favoritos" class="img-ilustra-favoritos">
             </div>
 
-        </section>
-        <section>
-            <img src="../assets/pedro-pasta.png" alt="Arquivo">
-            <h2>Favoritos</h2>
-            <img src="../assets/pedro-risco2.svg" alt="">
-            <img src="../assets/super-pedro.svg" alt="Super Pedro">
-            <p>Coisas que eu gosto, curiosidades sobre mim e minhas músicas e livros preferidos.</p>
-            <img src="../assets/pedro-favoritos.png" alt="Favoritos">
-            
-            <div class="favoritos">
-                <h3>Interesses</h3>
-                <p>Livros</p>
-                <p>Marvel</p>
-                <p>Filmes</p>
-                <p>Lego</p>
-                <p>Natação</p>
+            <!-- Cards (398x469px) -->
+            <div class="grade-favoritos">
+                <div class="card-favorito card-verde">
+                    <h3>Interesses</h3>
+                    <div class="tags-interesses">
+                        <span class="tag-livros">Livros</span>
+                        <span class="tag-marvel">Marvel</span>
+                        <span class="tag-filmes">Filmes</span>
+                        <span class="tag-lego">Lego</span>
+                        <span class="tag-natacao">Natação</span>
+                    </div>
+                </div>
+
+                <div class="card-favorito card-branco">
+                    <h3>Curiosidades</h3>
+                    <ul>
+                        <li><span class="bullet-bolinha"></span>Morei 8 anos em São Bernardo do Campo</li>
+                        <li><span class="bullet-bolinha"></span>Torço para o Santos</li>
+                        <li><span class="bullet-bolinha"></span>Ganhei uma medalha na OBMEP</li>
+                        <li><span class="bullet-bolinha"></span>Tenho uma cachorro chamada Cristal</li>
+                    </ul>
+                </div>
+
+                <div class="card-favorito card-verde">
+                    <h3>Cantores e livros</h3>
+                    <div class="midia-favoritos">
+                        <div class="linha-cantores">
+                            <div class="cantor-box">
+                                <img src="../assets/pedro-bruno-mars.png" alt="Bruno Mars" class="img-cantor">
+                            </div>
+                            <div class="cantor-box">
+                                <img src="../assets/pedro-coldplay.png" alt="Coldplay" class="img-cantor">
+                            </div>
+                        </div>
+                        <div class="linha-livros">
+                            <img src="../assets/pedro-aventura.png" alt="Livro Aventura" class="img-livro">
+                            <img src="../assets/pedro-fantasia.png" alt="Livro Fantasia" class="img-livro">
+                            <img src="../assets/pedro-misterio.png" alt="Livro Mistério" class="img-livro">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="favoritos">
-                <h3>Curiosidades</h3>
-                <ul>
-                    <li>Morei 8 anos em São Bernardo do Campo</li>
-                    <li>Torço para o Santos</li>
-                    <li>Ganhei uma medalha na OBMEP</li>
-                    <li>Tenho uma cachorro chamada Cristal</li>
-                </ul>
-            </div>
-            <div class="favoritos">
-                <h3>Cantores e livros</h3>
-                
-                <p>Bruno Mars</p>
-                <p>Coldplay</p>
-            </div>
-            <img src="../assets/pedro-brlho2.png" alt="">
-            <img src="../assets/pedro-quadriculado.svg" alt="">
-            <img src="../assets/pedro-curvas.png" alt="">
+
+            <img src="../assets/pedro-quadriculado.svg" alt="" class="quadriculado-baixo">
         </section>
-        <section>
-            <img src="../assets/pedro-lugares.png" alt="Lugares">
-            <h2>Lugares</h2>
-            <img src="../assets/pedro-aviao.png" alt="Avião">
-            <img src="../assets/pedro-mancha-verde.png" alt="Mancha verde">
-            <img src="../assets/pedro-javisitei.png" alt="Já visitei">
-            <img src="../assets/pedro-querovisitar.png" alt="Quero visitar">
-            <img src="../assets/pedro-brilho3.png" alt="">
+
+        <!-- CURVA DE TRANSIÇÃO APÓS FAVORITOS -->
+        <img src="../assets/pedro-curvas.png" alt="" class="curva-favoritos-lugares">
+
+        <!-- SEÇÃO LUGARES -->
+        <section class="lugares-secao">
+            <div class="lugares-topo">
+                <div class="titulo-icone-lugares">
+                    <img src="../assets/pedro-lugares.png" alt="Pin" class="icone-lugares">
+                    <h2 class="titulo-lugares">Lugares</h2>
+                </div>
+                <!-- Avião (489.03px) que sobrepõe os cards e a mancha verde -->
+                <img src="../assets/pedro-aviao.png" alt="Avião" class="img-aviao">
+            </div>
+
+            <!-- Mancha verde no fundo com os cards centralizados e gap reduzido -->
+            <div class="lugares-container-cards">
+                <img src="../assets/pedro-mancha-verde.png" alt="" class="mancha-verde-lugares">
+                <div class="grade-lugares">
+                    <img src="../assets/pedro-javisitei.png" alt="Já visitei" class="card-lugar-img">
+                    <img src="../assets/pedro-querovisitar.png" alt="Quero visitar" class="card-lugar-img">
+                </div>
+                <img src="../assets/pedro-brilho3.png" alt="" class="brilho-lugares-esq">
+            </div>
         </section>
-        <section class="fundo-verde">
-            <h2>Habilidades</h2>
-            <p>Tecnologias e competências que uso para criar, resolver problemas e tirar ideias do papel.</p>
-            <img src="../assets/pedro-risco3.svg" alt="">
-            <img src="../assets/pedro-computador.png" alt="Computador">
-            <img src="../assets/super-pedro.svg">
-            <img src="../assets/pedro-habilidades.png" alt="Habilidades">
-            
+
+        <!-- BORDA EXTERIOR SUPERIOR (HABILIDADES) -->
+        <img src="../assets/pedro-curvas2.png" alt="" class="curva-borda-exterior curva-topo">
+
+        <!-- SEÇÃO HABILIDADES (100% LARGURA) -->
+        <section class="secao-full-verde habilidades-secao">
+            <div class="conteudo-centralizado">
+                <div class="habilidades-cabecalho">
+                    <h2 class="titulo-habilidades">Habilidades</h2>
+                    <p class="habilidades-subtexto">Tecnologias e competências que uso para criar, resolver problemas e tirar ideias do papel.</p>
+                    <img src="../assets/pedro-risco3.svg" alt="" class="risco-verde-claro">
+                </div>
+
+                <div class="habilidades-grade">
+                    <img src="../assets/pedro-computador.png" alt="Notebook" class="img-laptop">
+                    <img src="../assets/pedro-habilidades.png" alt="Habilidades" class="img-techs">
+                </div>
+            </div>
+        </section>
+
+        <!-- BORDA EXTERIOR INFERIOR (HABILIDADES) -->
+        <img src="../assets/pedro-curvas2.png" alt="" class="curva-borda-exterior curva-baixo">
+
     </main>
+
 </body>
 </html>
