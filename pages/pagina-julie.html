@@ -1,11 +1,423 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julie Annie - Site Pessoal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Julie Annie | Ytê</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="../assets/girl-hero.png">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/julie.css">
 </head>
+
 <body>
-    
+
+  <div class="page">
+
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header class="topbar">
+      <nav class="nav" aria-label="Integrantes">
+
+        <a class="nav__logo" href="#julie">
+          <img src="../assets/logo.png" alt="Ytê">
+        </a>
+
+        <ul class="nav__list">
+          <li><a class="nav__link nav__link--julie is-active" href="#julie" aria-current="page">Julie</a></li>
+          <li><a class="nav__link nav__link--mariana" href="#mariana">Mariana</a></li>
+          <li><a class="nav__link nav__link--mayte" href="#mayte">Maytê</a></li>
+          <li><a class="nav__link nav__link--pedro" href="#pedro">Pedro</a></li>
+        </ul>
+
+      </nav>
+    </header>
+
+
+    <main id="julie">
+
+      <!-- 1. HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+
+        <img class="checker" src="../assets/checker.png" alt="">
+        <img class="checker2" src="../assets/checker.png" alt="">
+
+        <i class="burst burst-pos"></i>
+
+        <img class="star" src="../assets/star.png" alt="">
+        <img class="star2" src="../assets/star.png" alt="">
+
+        <h1 id="hero-title" class="hero__title">
+          <span class="hero__first">Julie</span>
+          <span class="hero__last">Annie</span>
+        </h1>
+
+        <div class="hero__welcome-bg hero-welcome-bg"></div>
+
+        <p class="hero__welcome">
+          Bem-vindo(a) <span>à minha página!</span>
+        </p>
+
+        <div class="hero__bar hero-bar"></div>
+
+        <p class="hero__desc">
+          Uma <b>página pessoal</b> com <b>meus</b> interesses,
+          curiosidades, lugares marcantes e habilidades.
+        </p>
+
+        <img class="squiggle" src="../assets/squiggle.png" alt="">
+
+        <!-- ELEMENTOS DECORATIVOS -->
+        <img class="blob" src="../assets/blob.png" alt="">
+        <img class="star-big" src="../assets/star-big.png" alt="">
+        <img class="window" src="../assets/window.png" alt="">
+
+        <i class="spark spark-pos"></i>
+
+        <!-- NOVA PERSONAGEM -->
+        <img class="girl-hero" src="../assets/girl-hero.png" alt="Personagem ilustrada de Julie">
+
+        <img class="sparkle-blue" src="../assets/sparkle-blue.png" alt="">
+        <img class="swoosh" src="../assets/swoosh.png" alt="">
+        <img class="picture" src="../assets/picture.png" alt="">
+        <img class="clapper" src="../assets/clapper.png" alt="">
+        <img class="books" src="../assets/books.png" alt="">
+        <img class="headphones" src="../assets/headphones.png" alt="">
+
+      </section>
+
+
+      <!-- 2. SOBRE MIM -->
+      <section id="sobre" class="about" aria-labelledby="about-title">
+
+        <svg class="wave wave--blue" viewBox="0 0 820 70" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 44C110 8 230 62 420 36S700 8 820 36V70H0Z" fill="#0a47c4" />
+          <path d="M0 40C110 4 230 58 420 32S700 4 820 32" fill="none" stroke="#fff" stroke-width="9" />
+          <path d="M0 34C110 -2 230 52 420 26S700 -2 820 26" fill="none" stroke="#0a3fb5" stroke-width="3" />
+        </svg>
+
+        <img class="cupcake" src="../assets/cupcake.png" alt="">
+
+        <a class="scroll scroll-pos" href="#sobre" aria-label="Rolar para Sobre mim">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <span class="about__ghost" aria-hidden="true">universo</span>
+
+        <h2 id="about-title" class="title-outline">
+          <span class="t-sobre">Sobre</span>
+          <span class="t-mim">mim</span>
+        </h2>
+
+        <i class="line line-pos"></i>
+        <i class="line line-pos2"></i>
+        <i class="burst burst-pos2"></i>
+
+        <img class="polaroid-birthday" src="../assets/polaroid-birthday.png"
+          alt="Julie soprando as velas do bolo de aniversário">
+        <img class="sparkle-blue2" src="../assets/sparkle-blue.png" alt="">
+
+        <div class="card card-pos">
+
+          <dl class="info">
+
+            <div class="info__row">
+              <img class="candle-15" src="../assets/candle-15.png" alt="">
+              <dt class="pill pill--sky pill-pos">Idade</dt>
+              <dd class="dd">15 anos</dd>
+              <img class="face-hat" src="../assets/face-hat.png" alt="">
+            </div>
+
+            <hr class="info__divider">
+
+            <div class="info__row">
+              <img class="calendar" src="../assets/calendar.png" alt="">
+              <dt class="pill pill--sky pill-pos2">Aniversário</dt>
+              <dd class="dd2">21 de janeiro de 2011</dd>
+            </div>
+
+          </dl>
+        </div>
+
+        <ul class="chips">
+          <li class="chip chip-pos">
+            <img src="../assets/icon-smile.png" alt="">
+            <span>Extrovertida</span>
+          </li>
+
+          <li class="chip chip--sky chip-pos2">
+            <img src="../assets/icon-palette.png" alt="">
+            <span>Criativa</span>
+          </li>
+
+          <li class="chip chip-pos3">
+            <img src="../assets/icon-chat.png" alt="">
+            <span>Comunicativa</span>
+          </li>
+        </ul>
+
+      </section>
+
+
+      <!-- 3. HOBBIES -->
+      <section class="hobbies" aria-labelledby="hobbies-title">
+
+        <svg class="wave wave--beige" viewBox="0 0 820 70" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 40C110 4 230 58 420 32S700 4 820 32" fill="none" stroke="#0a3fb5" stroke-width="3"
+            transform="translate(0 -6)" />
+          <path d="M0 44C110 8 230 62 420 36S700 8 820 36V70H0Z" fill="#f4ebe7" />
+          <path d="M0 44C110 8 230 62 420 36S700 8 820 36" fill="none" stroke="#fff" stroke-width="9" />
+          <path d="M0 38C110 2 230 56 420 30S700 2 820 30" fill="none" stroke="#0a3fb5" stroke-width="3" />
+        </svg>
+
+        <div class="hobbies__head">
+
+          <p class="hobbies__pre hobbies-pre">meus</p>
+
+          <i class="line line--blue line-pos3"></i>
+
+          <h2 id="hobbies-title" class="title-grad title-grad-pos">
+            Hobbies
+          </h2>
+
+          <p class="hobbies__lead hobbies-lead">
+            Coisas que eu gosto, curiosidades sobre mim e minhas músicas e livros preferidos.
+          </p>
+
+        </div>
+
+        <i class="burst burst-pos3"></i>
+
+        <img class="star3" src="../assets/star.png" alt="">
+        <img class="checker3" src="../assets/checker.png" alt="">
+
+        <h3 class="tab tab-pos">Arte</h3>
+
+        <img class="starry-night" src="../assets/starry-night.png" alt="Noite Estrelada (referência de arte)">
+
+
+        <!-- MÚSICA -->
+        <article class="hcard hcard-pos">
+
+          <img class="musicas-title" src="../assets/musicas-title.png" alt="Minhas músicas preferidas!">
+          <img class="vinyl" src="../assets/vinyl.png" alt="">
+          <img class="player" src="../assets/player.png" alt="">
+          <img class="checklist-music" src="../assets/checklist-music.png"
+            alt="Pop, Indie, Alternativo, Trilhas de filmes">
+          <img class="vinyl-photo" src="../assets/vinyl-photo.png" alt="">
+
+          <h3 class="hcard__title">Música</h3>
+
+        </article>
+
+
+        <!-- ESPORTE -->
+        <article class="hcard hcard-pos2">
+
+          <img class="handball" src="../assets/handball.png" alt="">
+
+          <p class="sport sport--b sport-pos">Handebol</p>
+
+          <i class="line line--blue line-pos4"></i>
+
+          <p class="sport sport--g sport-pos2">
+            <span>Patinação</span><br>
+            <em>Artística</em>
+          </p>
+
+          <i class="line line--blue line-pos5"></i>
+
+          <img class="skate" src="../assets/skate.png" alt="">
+
+          <h3 class="hcard__title">Esporte</h3>
+
+        </article>
+
+
+        <!-- FILMES -->
+        <article class="hcard hcard-pos3">
+
+          <img class="checklist-film" src="../assets/checklist-film.png" alt="Fantasia, Aventura, Drama, Animação">
+          <img class="popcorn" src="../assets/popcorn.png" alt="">
+          <img class="horse" src="../assets/horse.png" alt="">
+          <img class="star4" src="../assets/star.png" alt="">
+
+          <h3 class="hcard__title">Filme</h3>
+
+        </article>
+
+        <img class="girl-leaning" src="../assets/girl-leaning.png" alt="Julie apoiada nos braços, olhando para o lado">
+
+      </section>
+
+
+      <!-- 4. VIAGENS -->
+      <section class="trips" aria-labelledby="trips-title">
+
+        <img class="wave-audio" src="../assets/waveform.svg" alt="" aria-hidden="true">
+        <img class="map" src="../assets/map.png" alt="">
+
+        <i class="burst burst--g burst-pos4"></i>
+
+        <h2 id="trips-title" class="title-teal title-teal-pos">
+          Viagens
+        </h2>
+
+        <img class="plane" src="../assets/plane.png" alt="">
+
+
+        <!-- DESTINOS QUE JÁ VISITEI -->
+        <article class="tcard tcard-pos">
+
+          <h3 class="tcard__tag tcard-tag">Que já fiz</h3>
+
+          <img class="travel-polaroids" src="../assets/travel-polaroids.png" alt="Fotos de Orlando, Maceió e Penha">
+
+          <ul class="places">
+
+            <li class="li">
+              <a href="https://www.visitorlando.com/" target="_blank" rel="noopener noreferrer">
+                <span>Orlando, EUA</span>
+              </a>
+              2016
+            </li>
+
+            <li class="li2">
+              <a href="https://www.visitbrasil.com/" target="_blank" rel="noopener noreferrer">
+                <span>Maceió, BRA</span>
+              </a>
+              2019
+            </li>
+
+            <li class="li3">
+              <a href="https://www.visitepenha.com.br/" target="_blank" rel="noopener noreferrer">
+                <span>Penha, BRA</span>
+              </a>
+              2023
+            </li>
+
+          </ul>
+
+          <i class="line line--blue line-pos6"></i>
+          <i class="line line--blue line-pos7"></i>
+          <i class="line line--blue line-pos8"></i>
+
+        </article>
+
+
+        <!-- DESTINOS QUE QUERO CONHECER -->
+        <article class="tcard tcard-pos2">
+
+          <h3 class="tcard__tag tcard-tag2">Que quero fazer</h3>
+
+          <ul class="places">
+
+            <li class="li4">
+              <a href="https://www.southafrica.net/" target="_blank" rel="noopener noreferrer">
+                <span>Joanesburgo, África do Sul</span>
+              </a>
+            </li>
+
+            <li class="li5">
+              <a href="https://www.west.is/en/moya/toy/index/municipality/borgarnes" target="_blank"
+                rel="noopener noreferrer">
+                <span>Borgarnes, Islândia</span>
+              </a>
+            </li>
+
+            <li class="li6">
+              <a href="https://www.visitgreece.gr/en/islands/Cyclades/santorini" target="_blank"
+                rel="noopener noreferrer">
+                <span>Santorini, Grécia</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <i class="line line--blue line-pos9"></i>
+          <i class="line line--blue line-pos10"></i>
+          <i class="line line--blue line-pos11"></i>
+
+          <img class="africa-do-sul" src="../assets/africa-do-sul.png" alt="Safári na África do Sul">
+
+          <img class="borgarnes" src="../assets/borgarnes.png" alt="Aurora boreal em Borgarnes, Islândia">
+
+          <img class="santorini-polaroid" src="../assets/santorini-polaroid.png" alt="Cúpulas azuis de Santorini, Grécia">
+        </article>
+
+
+        <!-- ELEMENTOS DECORATIVOS -->
+        <img class="globe" src="../assets/globe.png" alt="">
+
+        <img class="traveler" src="../assets/traveler.png" alt="Ilustração de Julie viajante com câmera e mochila">
+
+        <img class="stamps-a" src="../assets/stamps-a.png" alt="">  
+        <img class="suitcase" src="../assets/suitcase.png" alt="">
+
+        <img class="stamps-b" src="../assets/stamps-b.png" alt="">
+
+      </section>
+
+
+      <!-- 5. HABILIDADES -->
+      <section class="skills" aria-labelledby="skills-title">
+
+        <div class="skills__head skills-head">
+
+          <h2 id="skills-title" class="title-grad">
+            Habilidades
+          </h2>
+
+          <i class="line line--blue skills__rule"></i>
+
+          <img class="skills__star" src="../assets/star.png" alt="">
+
+        </div>
+
+        <p class="skills__tag skills-tag">técnicas</p>
+
+        <img class="laptop" src="../assets/laptop.png" alt="">
+
+        <img class="squiggle2" src="../assets/squiggle.png" alt="">
+
+        <i class="burst burst--g burst-pos5"></i>
+
+        <div class="win win-pos" aria-hidden="true">
+
+          <span class="win__dot win__dot--w"></span>
+          <span class="win__dot win__dot--g"></span>
+          <span class="win__dot win__dot--y"></span>
+
+          <span class="win__min"></span>
+          <span class="win__max"></span>
+          <span class="win__close"></span>
+
+        </div>
+
+        <img class="tech-logos" src="../assets/tech-logos.png"
+          alt="CSS, Python, PostgreSQL, Java, VS Code, Figma, HTML e Alight Motion">
+
+        <img class="girl-headphones" src="../assets/girl-headphones.png" alt="Julie de fones de ouvido azuis">
+
+        <img class="checker4" src="../assets/checker.png" alt="">
+
+      </section>
+
+    </main>
+
+  </div>
+
 </body>
+
 </html>

@@ -1,0 +1,1609 @@
+@font-face {
+  font-family: "Tommy";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: local("Tommy Black"), local("Tommy-Black"), local("Tommy"),
+    url("assets/fonts/tommy font bold.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Tommy";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Tommy Bold"), local("Tommy-Bold"),
+    url("assets/fonts/tommy font bold.otf") format("opentype")
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4ebe7;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #0a3fb5;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: none;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.page {
+  position: relative;
+  width: 820px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+/* Aumenta a pagina inteira em telas maiores.
+   zoom: 1.5 deixa tudo 1.5x maior, sem mexer nos px do resto do codigo. */
+@media (min-width: 1100px) {
+  .page {
+    zoom: 1.3;
+  }
+}
+
+@media (min-width: 1300px) {
+  .page {
+    zoom: 1.55;
+  }
+}
+
+@media (min-width: 1500px) {
+  .page {
+    zoom: 1.8;
+  }
+}
+
+@media (min-width: 1750px) {
+  .page {
+    zoom: 2.1;
+  }
+}
+
+@media (min-width: 2000px) {
+  .page {
+    zoom: 2.4;
+  }
+}
+
+
+
+
+/* ===== POSICAO DE CADA ELEMENTO ===== */
+
+/* --- 1. HERO --- */
+.checker {
+  position: absolute;
+  left: 0px;
+  top: 86px;
+  width: 90px;
+  z-index: 1;
+}
+
+.checker2 {
+  position: absolute;
+  left: 703px;
+  top: 493px;
+  width: 100px;
+  z-index: 1;
+}
+
+.burst-pos {
+  position: absolute;
+  left: 400px;
+  top: 128px;
+  width: 46px;
+  transform: rotate(18deg);
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  left: 288px;
+  top: 148px;
+  width: 40px;
+  z-index: 3;
+}
+
+.star2 {
+  position: absolute;
+  left: 17px;
+  top: 237px;
+  width: 40px;
+  z-index: 3;
+}
+
+.hero-welcome-bg {
+  position: absolute;
+  left: 38px;
+  top: 325px;
+  width: 300px;
+  height: 54px;
+}
+
+.hero-bar {
+  position: absolute;
+  left: 44px;
+  top: 394px;
+  height: 50px;
+}
+
+.squiggle {
+  position: absolute;
+  left: 263px;
+  top: 437px;
+  width: 76px;
+  z-index: 1;
+}
+
+.blob {
+  position: absolute;
+  left: 372px;
+  top: 190px;
+  width: 440px;
+  transform: rotate(-4deg);
+  z-index: 1;
+}
+
+.star-big {
+  position: absolute;
+  left: 445px;
+  top: 292px;
+  width: 72px;
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+
+.window {
+  position: absolute;
+  left: 370px;
+  top: 122px;
+  width: 450px;
+  z-index: 2;
+}
+
+.spark-pos {
+  position: absolute;
+  left: 496px;
+  top: 244px;
+  width: 44px;
+  z-index: 3;
+}
+
+.girl-hero {
+  position: absolute;
+  left: 470px;
+  top: 172px;
+  width: 250px;
+  z-index: 4;
+}
+
+.sparkle-blue {
+  position: absolute;
+  left: 663px;
+  top: 362px;
+  width: 56px;
+  z-index: 5;
+}
+
+.swoosh {
+  position: absolute;
+  left: 470px;
+  top: 420px;
+  width: 292px;
+  z-index: 4;
+}
+
+.picture {
+  position: absolute;
+  left: 398px;
+  top: 383px;
+  width: 86px;
+  transform: rotate(-6deg);
+  z-index: 5;
+}
+
+.clapper {
+  position: absolute;
+  left: 551px;
+  top: 430px;
+  width: 80px;
+  z-index: 5;
+}
+
+.books {
+  position: absolute;
+  left: 714px;
+  top: 406px;
+  width: 102px;
+  transform: rotate(-6deg);
+  z-index: 5;
+}
+
+.headphones {
+  position: absolute;
+  left: 747px;
+  top: 114px;
+  width: 72px;
+  z-index: 5;
+}
+
+/* --- 2. SOBRE MIM --- */
+.cupcake {
+  position: absolute;
+  left: -2px;
+  top: -102px;
+  width: 96px;
+  z-index: 5;
+}
+
+.scroll-pos {
+  position: absolute;
+  left: 748px;
+  top: -54px;
+  width: 74px;
+  z-index: 6;
+}
+
+.line-pos {
+  position: absolute;
+  left: 390px;
+  top: 143px;
+  width: 215px;
+}
+
+.line-pos2 {
+  position: absolute;
+  left: 648px;
+  top: 102px;
+  width: 112px;
+}
+
+.burst-pos2 {
+  position: absolute;
+  left: 282px;
+  top: 62px;
+  width: 46px;
+  transform: rotate(12deg);
+}
+
+.polaroid-birthday {
+  position: absolute;
+  left: 15px;
+  top: 108px;
+  width: 305px;
+  z-index: 2;
+}
+
+.sparkle-blue2 {
+  position: absolute;
+  left: 36px;
+  top: 438px;
+  width: 44px;
+  z-index: 3;
+}
+
+.card-pos {
+  position: absolute;
+  left: 378px;
+  top: 188px;
+  width: 430px;
+  height: 252px;
+}
+
+.candle-15 {
+  position: absolute;
+  left: 22px;
+  top: 12px;
+  width: 92px;
+}
+
+.pill-pos {
+  position: absolute;
+  left: 148px;
+  top: 25px;
+  width: 94px;
+}
+
+.dd {
+  position: absolute;
+  left: 156px;
+  top: 62px;
+}
+
+.face-hat {
+  position: absolute;
+  left: 305px;
+  top: 30px;
+  width: 78px;
+}
+
+.calendar {
+  position: absolute;
+  left: 34px;
+  top: 139px;
+  width: 100px;
+}
+
+.pill-pos2 {
+  position: absolute;
+  left: 148px;
+  top: 140px;
+  width: 130px;
+}
+
+.dd2 {
+  position: absolute;
+  left: 156px;
+  top: 176px;
+}
+
+.chip-pos {
+  position: absolute;
+  left: 80px;
+  top: 485px;
+}
+
+.chip-pos2 {
+  position: absolute;
+  left: 355px;
+  top: 485px;
+}
+
+.chip-pos3 {
+  position: absolute;
+  left: 630px;
+  top: 485px;
+}
+
+/* --- 3. HOBBIES --- */
+.hobbies-pre {
+  position: absolute;
+  left: 33px;
+  top: 16px;
+}
+
+.line-pos3 {
+  position: absolute;
+  left: 165px;
+  top: 48px;
+  width: 213px;
+}
+
+.title-grad-pos {
+  position: absolute;
+  left: 33px;
+  top: 50px;
+}
+
+.hobbies-lead {
+  position: absolute;
+  left: 33px;
+  top: 142px;
+  width: 390px;
+}
+
+.burst-pos3 {
+  position: absolute;
+  left: 398px;
+  top: 36px;
+  width: 44px;
+  transform: rotate(10deg);
+}
+
+.star3 {
+  position: absolute;
+  left: 657px;
+  top: 30px;
+  width: 40px;
+}
+
+.checker3 {
+  position: absolute;
+  left: 492px;
+  top: 101px;
+  width: 115px;
+}
+
+.tab-pos {
+  position: absolute;
+  left: 697px;
+  top: 78px;
+  width: 130px;
+  height: 44px;
+}
+
+.starry-night {
+  position: absolute;
+  left: 648px;
+  top: 107px;
+  width: 230px;
+}
+
+.hcard-pos {
+  position: absolute;
+  left: 33px;
+  top: 222px;
+  width: 226px;
+  height: 256px;
+}
+
+.musicas-title {
+  position: absolute;
+  left: 128px;
+  top: 50px;
+  width: 96px;
+}
+
+.vinyl {
+  position: absolute;
+  left: -4px;
+  top: 78px;
+  width: 126px;
+}
+
+.player {
+  position: absolute;
+  left: 116px;
+  top: 120px;
+  width: 112px;
+}
+
+.checklist-music {
+  position: absolute;
+  left: 8px;
+  top: 165px;
+  width: 120px;
+}
+
+.vinyl-photo {
+  position: absolute;
+  left: 132px;
+  top: 168px;
+  width: 98px;
+}
+
+.hcard-pos2 {
+  position: absolute;
+  left: 267px;
+  top: 222px;
+  width: 226px;
+  height: 256px;
+}
+
+.handball {
+  position: absolute;
+  left: 0px;
+  top: 52px;
+  width: 66px;
+}
+
+.sport-pos {
+  position: absolute;
+  left: 74px;
+  top: 70px;
+}
+
+.line-pos4 {
+  position: absolute;
+  left: 74px;
+  top: 118px;
+  width: 110px;
+}
+
+.sport-pos2 {
+  position: absolute;
+  left: 10px;
+  top: 148px;
+}
+
+.line-pos5 {
+  position: absolute;
+  left: 10px;
+  top: 222px;
+  width: 92px;
+}
+
+.skate {
+  position: absolute;
+  left: 122px;
+  top: 128px;
+  width: 106px;
+}
+
+.hcard-pos3 {
+  position: absolute;
+  left: 502px;
+  top: 222px;
+  width: 226px;
+  height: 256px;
+}
+
+.checklist-film {
+  position: absolute;
+  left: 14px;
+  top: 50px;
+  width: 104px;
+}
+
+.popcorn {
+  position: absolute;
+  left: 126px;
+  top: 52px;
+  width: 100px;
+}
+
+.horse {
+  position: absolute;
+  left: 10px;
+  top: 138px;
+  width: 124px;
+}
+
+.star4 {
+  position: absolute;
+  left: 160px;
+  top: 156px;
+  width: 26px;
+}
+
+.girl-leaning {
+  position: absolute;
+  left: 500px;
+  top: 388px;
+  width: 384px;
+  z-index: 7;
+}
+
+/* --- 4. VIAGENS --- */
+.map {
+  position: absolute;
+  left: 50px;
+  top: 22px;
+  width: 112px;
+}
+
+.burst-pos4 {
+  position: absolute;
+  left: 188px;
+  top: 14px;
+  width: 40px;
+  transform: rotate(14deg);
+}
+
+.title-teal-pos {
+  position: absolute;
+  left: 246px;
+  top: 14px;
+}
+
+.plane {
+  position: absolute;
+  left: 585px;
+  top: 22px;
+  width: 240px;
+}
+
+.tcard-pos {
+  position: absolute;
+  left: 25px;
+  top: 110px;
+  width: 330px;
+  height: 364px;
+}
+
+.tcard-tag {
+  position: absolute;
+  left: 63px;
+  top: -3px;
+  width: 210px;
+}
+
+.travel-polaroids {
+  position: absolute;
+  left: 3px;
+  top: 50px;
+  width: 126px;
+}
+
+.li {
+  position: absolute;
+  left: 123px;
+  top: 92px;
+}
+
+.li2 {
+  position: absolute;
+  left: 123px;
+  top: 181px;
+}
+
+.li3 {
+  position: absolute;
+  left: 123px;
+  top: 280px;
+}
+
+.line-pos6 {
+  position: absolute;
+  left: 123px;
+  top: 138px;
+  width: 106px;
+}
+
+.line-pos7 {
+  position: absolute;
+  left: 123px;
+  top: 247px;
+  width: 106px;
+}
+
+.line-pos8 {
+  position: absolute;
+  left: 35px;
+  top: 352px;
+  width: 272px;
+}
+
+.tcard-pos2 {
+  position: absolute;
+  left: 468px;
+  top: 116px;
+  width: 330px;
+  height: 358px;
+}
+
+.tcard-tag2 {
+  position: absolute;
+  left: 60px;
+  top: -3px;
+  width: 210px;
+}
+
+.li4 {
+  position: absolute;
+  left: 62px;
+  top: 83px;
+  width: 130px;
+}
+
+.li5 {
+  position: absolute;
+  left: 80px;
+  top: 178px;
+}
+
+.li6 {
+  position: absolute;
+  left: 98px;
+  top: 268px;
+}
+
+.line-pos9 {
+  position: absolute;
+  left: 62px;
+  top: 140px;
+  width: 120px;
+}
+
+.line-pos10 {
+  position: absolute;
+  left: 80px;
+  top: 240px;
+  width: 103px;
+}
+
+.line-pos11 {
+  position: absolute;
+  left: 30px;
+  top: 346px;
+  width: 295px;
+}
+
+.africa-do-sul {
+  position: absolute;
+  left: 204px;
+  top: 36px;
+  width: 116px;
+  transform: rotate(3deg);
+}
+
+.borgarnes {
+  position: absolute;
+  left: 208px;
+  top: 136px;
+  width: 112px;
+  transform: rotate(-3deg);
+}
+
+.santorini-polaroid {
+  position: absolute;
+  left: 206px;
+  top: 235px;
+  width: 112px;
+  transform: rotate(2deg);
+}
+
+.globe {
+  position: absolute;
+  left: 268px;
+  top: 170px;
+  width: 266px;
+  z-index: 1;
+}
+
+.traveler {
+  position: absolute;
+  left: 286px;
+  top: 184px;
+  width: 256px;
+  z-index: 2;
+}
+
+.stamps-a {
+  position: absolute;
+  left: 72px;
+  top: 492px;
+  width: 190px;
+}
+
+.suitcase {
+  position: absolute;
+  left: 343px;
+  top: 468px;
+  width: 140px;
+}
+
+.stamps-b {
+  position: absolute;
+  left: 566px;
+  top: 490px;
+  width: 196px;
+}
+
+/* --- 5. HABILIDADES --- */
+.skills-head {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 755px;
+}
+
+.skills-tag {
+  position: absolute;
+  left: 8px;
+  top: 90px;
+  width: 140px;
+}
+
+.laptop {
+  position: absolute;
+  left: 142px;
+  top: 84px;
+  width: 76px;
+  z-index: 1;
+}
+
+.squiggle2 {
+  position: absolute;
+  left: 250px;
+  top: 108px;
+  width: 50px;
+}
+
+.burst-pos5 {
+  position: absolute;
+  left: 482px;
+  top: 126px;
+  width: 44px;
+  transform: rotate(12deg);
+}
+
+.win-pos {
+  position: absolute;
+  left: 13px;
+  top: 165px;
+  width: 440px;
+  height: 336px;
+  transform: rotate(-1.2deg);
+  z-index: 1;
+}
+
+.tech-logos {
+  position: absolute;
+  left: 42px;
+  top: 234px;
+  width: 368px;
+  z-index: 2;
+}
+
+.girl-headphones {
+  position: absolute;
+  left: 436px;
+  top: 166px;
+  width: 384px;
+  z-index: 3;
+}
+
+.checker4 {
+  position: absolute;
+  left: 0px;
+  top: 512px;
+  width: 98px;
+}
+
+
+/* ===== ESTILO DOS COMPONENTES ===== */
+section {
+  position: relative;
+}
+
+
+/* ---------- elementos decorativos em CSS ---------- */
+.burst {
+  display: block;
+  aspect-ratio: 1;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cg stroke='%2399dd10' stroke-width='7' stroke-linecap='round' fill='none'%3E%3Cpath d='M44 30l-12 4M30 12l-8 12M10 8l4 15'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat
+}
+
+.burst--g {}
+
+.spark {
+  display: block;
+  aspect-ratio: 1;
+  background: #9bdc12;
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+  filter: drop-shadow(0 0 0 #fff)
+}
+
+.line {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 9px;
+}
+
+.line--blue {
+  background: #0a3fb5;
+}
+
+
+/* ---------- títulos ---------- */
+.title-grad {
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 1;
+  letter-spacing: -.01em;
+  background: linear-gradient(100deg, #0a3fb5 35%, #1c9a70 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(1.5px 2px 0 rgba(10, 63, 181, .18));
+}
+
+.title-outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1
+}
+
+.title-outline .t-sobre {
+  position: absolute;
+  left: 388px;
+  top: 40px;
+  font-size: 86px;
+  -webkit-text-stroke: 5px #0a8a3a;
+  paint-order: stroke fill;
+  text-shadow: 0 3px 0 #0a8a3a
+}
+
+.title-outline .t-mim {
+  position: absolute;
+  left: 634px;
+  top: 95px;
+  font-size: 70px;
+  color: #9bdc12;
+  -webkit-text-stroke: 4px #0a3fb5;
+  paint-order: stroke fill;
+  text-shadow: 0 3px 0 #0a3fb5
+}
+
+.title-teal {
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  font-size: 88px;
+  line-height: 1;
+  color: #fff;
+  -webkit-text-stroke: 5px #1aa7c9;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 0 #1aa7c9
+}
+
+/* ---------- navegação ---------- */
+.topbar {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+}
+
+.nav {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 718px;
+  height: 48px;
+  background: rgba(255, 255, 255, .55);
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .04)
+}
+
+.nav__logo {
+  position: absolute;
+  left: 45px;
+  top: 8px;
+  width: 92px;
+}
+
+.nav__logo img {
+  width: 100%;
+}
+
+.nav__list li {
+  position: absolute;
+  top: 10px;
+}
+
+.nav__list li:nth-child(1) {
+  left: 237px;
+}
+
+.nav__list li:nth-child(2) {
+  left: 347px;
+}
+
+.nav__list li:nth-child(3) {
+  left: 490px;
+}
+
+.nav__list li:nth-child(4) {
+  left: 616px;
+}
+
+.nav__link {
+  display: block;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.15
+}
+
+.nav__link--julie {
+  color: #fff;
+  background: #0a3fb5;
+}
+
+.nav__link--mariana {
+  color: #f0457c;
+}
+
+.nav__link--mayte {
+  color: #b0123c;
+}
+
+.nav__link--pedro {
+  color: #3a9a2a;
+}
+
+
+/* ==========================================================
+   1. HERO
+   ========================================================== */
+.hero {
+  height: 590px;
+  background: #e9e1df;
+  z-index: 1;
+}
+
+.hero__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  line-height: .8
+}
+
+.hero__first,
+.hero__last {
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  letter-spacing: -.02em;
+  -webkit-text-stroke: 2px #fff;
+  paint-order: stroke fill;
+  filter: drop-shadow(2px 3px 0 rgba(10, 63, 181, .25))
+}
+
+.hero__first {
+  left: 40px;
+  top: 148px;
+  font-size: 104px;
+  color: #0a3fb5;
+}
+
+.hero__last {
+  left: 56px;
+  top: 228px;
+  font-size: 104px;
+  color: #8bd10f;
+}
+
+.hero__welcome-bg {
+  background: rgba(255, 255, 255, .45);
+  border-radius: 4px;
+}
+
+.hero__welcome {
+  position: absolute;
+  left: 47px;
+  top: 335px;
+  width: 283px;
+  height: 30px;
+  background: #0a3fb5;
+  border: 2px solid #fff;
+  border-radius: 99px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3em;
+  transform: none;
+  z-index: 3;
+  box-shadow: 0 0 0 1.5px #0a3fb5
+}
+
+.hero__welcome span {
+  color: #fff;
+}
+
+.hero__welcome {
+  color: #9bdc12;
+}
+
+.hero__welcome span {
+  color: #fff;
+}
+
+.hero__bar {
+  width: 5px;
+  background: #0a3fb5;
+  border-radius: 9px;
+}
+
+.hero__desc {
+  position: absolute;
+  left: 65px;
+  top: 391px;
+  width: 250px;
+  font-size: 15px;
+  line-height: 1.28;
+  color: #0a3fb5;
+}
+
+.hero__desc b {
+  font-weight: 700;
+}
+
+
+.scroll {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e9efc2;
+  border: 5px solid #9bdc12;
+  color: #0a2a8a;
+  box-shadow: 0 0 0 3px #fff
+}
+
+.scroll svg {
+  width: 55%;
+}
+
+
+/* ==========================================================
+   2. SOBRE MIM
+   ========================================================== */
+.about {
+  height: 625px;
+  background: #0a47c4;
+  z-index: 1;
+  background-image: radial-gradient(ellipse at 20% 30%, #0f56d8 0%, transparent 60%)
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: block;
+  pointer-events: none;
+}
+
+.wave--blue {
+  top: -60px;
+}
+
+.wave--beige {
+  top: -56px;
+  z-index: 2;
+}
+
+.about__ghost {
+  position: absolute;
+  left: -10px;
+  top: 440px;
+  font: italic 400 150px/1 "Brush Script MT", "Segoe Script", cursive;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, .14);
+  letter-spacing: .02em;
+  pointer-events: none;
+  white-space: nowrap
+}
+
+.card {
+  background: #fff;
+  border-radius: 26px;
+  border: 3px solid #3b8fa3;
+  box-shadow: 0 0 22px rgba(80, 190, 255, .65);
+  z-index: 3
+}
+
+.info {
+  position: static;
+}
+
+.info__row {
+  position: static;
+}
+
+.info__divider {
+  position: absolute;
+  left: 30px;
+  right: 5px;
+  top: 127px;
+  border: 0;
+  height: 2.5px;
+  background: #0a3fb5;
+}
+
+.pill {
+  display: block;
+  border-radius: 99px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 3px 0;
+  line-height: 1.2;
+  color: #0a3fb5;
+}
+
+.pill--sky {
+  background: #19b6ff;
+}
+
+.card dd {
+  font-size: 22px;
+  font-weight: 500;
+  color: #5a5a5a;
+  white-space: nowrap;
+}
+
+.chips {
+  position: static;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  width: 182px;
+  height: 36px;
+  z-index: 3;
+  background: #0a3fb5;
+  border: 3px solid #fff;
+  border-radius: 99px;
+  padding-left: 54px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15.5px;
+  transform: none
+}
+
+.chip--sky {
+  background: #19b6ff;
+}
+
+.chip img {
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  transform: translateY(-50%);
+  padding: 13px;
+  background: #8fd400;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  object-fit: contain
+}
+
+/* ==========================================================
+   3. HOBBIES
+   ========================================================== */
+.hobbies {
+  height: 565px;
+  background: #f4ebe7;
+}
+
+.hobbies__head {
+  position: static;
+}
+
+.hobbies__pre {
+  font-size: 38px;
+  font-weight: 500;
+  color: #0a3fb5;
+  line-height: 1;
+}
+
+.hobbies__lead {
+  font-size: 14.8px;
+  line-height: 1.3;
+  color: #0a3fb5;
+}
+
+.tab {
+  background: #0a3fb5;
+  color: #fff;
+  border-radius: 22px 0 0 22px;
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  z-index: 3;
+  transform: none
+}
+
+.hcard {
+  background: #fff;
+  border-radius: 22px;
+  z-index: 3;
+  box-shadow: 0 2px 10px rgba(10, 63, 181, .06);
+}
+
+.hcard>img {
+  z-index: 1;
+}
+
+.hcard__title {
+  position: absolute;
+  left: 45px;
+  top: -17px;
+  width: 136px;
+  height: 44px;
+  background: #0a3fb5;
+  color: #fff;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  font-size: 25px;
+  box-shadow: 0 0 0 3px #fff
+}
+
+.sport {
+  font-family: "Tommy", "Fraunces", Georgia, serif;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.sport--b {
+  font-size: 31px;
+  color: #0a3fb5;
+}
+
+.sport--g {
+  font-size: 24px;
+  color: #0a3fb5;
+}
+
+.sport--g em {
+  font-style: normal;
+  color: #7fc10c;
+}
+
+.crop {
+  overflow: hidden;
+  transform: none;
+}
+
+.crop img {
+  width: 100%;
+}
+
+.hobbies .crop {
+  pointer-events: none;
+}
+
+
+/* ==========================================================
+   4. VIAGENS
+   ========================================================== */
+.trips {
+  height: 583px;
+  background: #0a47c4;
+  z-index: 2;
+  border-radius: 0 0 26px 26px;
+  background-image: radial-gradient(ellipse at 70% 10%, #0f56d8 0%, transparent 55%)
+}
+
+.wave-audio {
+  position: absolute;
+  left: 0;
+  top: -34px;
+  width: 100%;
+  height: 52px;
+  z-index: 3;
+}
+
+.tcard {
+  background: #fff;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.tcard__tag {
+  background: #9bdc12;
+  color: #0a3fb5;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 3px 0;
+  height: 32px;
+  border-radius: 3px;
+  transform: none
+}
+
+.places li {
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 1.18;
+  color: #0a3fb5;
+}
+
+.places li span {
+  display: block;
+  font-weight: 700;
+}
+
+.snap {
+  background: #fff;
+  padding: 6px 6px 14px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+  border: 1px solid #111;
+  position: absolute
+}
+
+.snap--a {
+  background: linear-gradient(#f2d9a0 0 52%, #b97832 52% 70%, #6b4a1f 70%) padding-box content-box;
+  transform: rotate(4deg);
+}
+
+.snap--b {
+  background: linear-gradient(#2a3a7a 0 45%, #5fe0b0 45% 60%, #e7eef5 60%) padding-box content-box;
+  transform: rotate(-3deg);
+}
+
+.snap__flag {
+  position: absolute;
+  left: -7px;
+  bottom: -6px;
+  width: 26px;
+  height: 18px;
+  border: 1px solid #fff;
+  background: linear-gradient(#e03c31 0 33%, #fff 33% 38%, #007749 38% 62%, #fff 62% 67%, #001489 67%)
+}
+
+.snap__flag--is {
+  background: linear-gradient(90deg, #02529c 0 30%, #fff 30% 38%, #dc1e35 38% 50%, #fff 50% 58%, #02529c 58%);
+}
+
+
+/* ==========================================================
+   5. HABILIDADES
+   ========================================================== */
+.skills {
+  height: 560px;
+  background: #f4ebe7;
+  z-index: 1;
+  overflow: clip;
+}
+
+.skills__tag {
+  background: #9bdc12;
+  color: #0a3fb5;
+  font-weight: 700;
+  font-size: 23px;
+  text-align: center;
+  border-radius: 11px;
+  padding: 2px 0;
+  transform: rotate(-2deg)
+}
+
+/* Habilidades: título, linha e estrela na mesma linha */
+.skills__head {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  z-index: 2;
+}
+
+.skills__head .title-grad {
+  flex: none;
+}
+
+.skills__rule {
+  flex: 1;
+  min-width: 20px;
+}
+
+.skills__star {
+  flex: none;
+  width: 40px;
+  margin-left: -24px;
+  position: relative;
+  top: -18px;
+}
+
+
+/* título menor em Habilidades */
+.skills__head .title-grad {
+  font-size: 74px;
+}
+
+.skills__head {
+  gap: 30px;
+}
+
+
+/* janela em CSS (nítida em qualquer resolução) */
+.win {
+  border-radius: 24px;
+  background: linear-gradient(160deg, #0a2d9e, #0b3bb8);
+  border: 4px solid #0a3fb5;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 7.5px #0a3fb5
+}
+
+.win__dot {
+  position: absolute;
+  top: 21px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.win__dot--w {
+  left: 26px;
+}
+
+.win__dot--g {
+  left: 62px;
+  background: #7ec80a;
+}
+
+.win__dot--y {
+  left: 98px;
+  background: #d6e800;
+}
+
+.win__min {
+  position: absolute;
+  right: 112px;
+  top: 32px;
+  width: 22px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.win__max {
+  position: absolute;
+  right: 66px;
+  top: 21px;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-radius: 3px;
+}
+
+.win__close {
+  position: absolute;
+  right: 20px;
+  top: 21px;
+  width: 22px;
+  height: 22px;
+}
+
+.win__close::before,
+.win__close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 130%;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.win__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.win::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62px;
+  height: 3px;
+  background: rgba(255, 255, 255, .25);
+}
+
+.skills__rule {
+  flex: 0 0 206px;
+  margin-left: auto;
+}
