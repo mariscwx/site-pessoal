@@ -1,0 +1,370 @@
+:root {
+  --cor-bege: #E0D1C8;
+  --cor-vinho: #3E030B;
+  --cor-carmim: #B40231;
+  --cor-branco: #F5F0EC;
+
+  --cor-julie: #3a5bc7;
+  --cor-mariana: #e0588a;
+  --cor-pedro: #3d9a3d;
+
+  --onda: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cpath d='M0,25 C150,45 300,5 450,15 C600,25 750,55 900,35 C1050,15 1150,35 1200,20 L1200,360 C1050,380 900,350 750,365 C600,380 450,330 300,355 C150,380 50,395 0,375 Z' fill='black'/%3E%3C/svg%3E");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--cor-branco);
+  color: #000;
+  font-family: 'Tommy font', sans-serif;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.topo {
+  background-color: var(--cor-carmim);
+  padding: 0.2rem;
+}
+
+.menu {
+  --bs-navbar-active-color: var(--cor-branco);
+  background-color: var(--cor-bege);
+  border-radius: 50px;
+  margin: 1rem;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.menu-lista {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.menu .link-julie {
+  color: var(--cor-julie);
+}
+
+.menu .link-mariana {
+  color: var(--cor-mariana);
+}
+
+.menu .link-pedro {
+  color: var(--cor-pedro);
+}
+
+.menu .menu-link:hover {
+  opacity: 0.7;
+}
+
+.menu .link-mayte {
+  color: var(--cor-branco);
+  background-color: var(--cor-carmim);
+  border-radius: 20px;
+}
+
+.perfil {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--cor-bege);
+  text-align: center;
+  padding-block: 2.5rem 3rem;
+  padding-inline: max(6%, calc((100% - 1200px) / 2));
+
+  -webkit-mask-image: var(--onda);
+    mask-image: var(--onda);
+  -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.perfil-avatar {
+  position: relative;
+  isolation: isolate;
+}
+
+.perfil-avatar::before {
+  content: "";
+  position: absolute;
+  inset: -15% 5% -4% -5%;
+  z-index: -10;
+  background-color: var(--cor-carmim);
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+}
+
+.perfil-avatar img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.perfil-destaque {
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 1.25rem);
+}
+
+.perfil-descricao {
+  font-size: clamp(0.9rem, 1vw + 0.6rem, 1rem);
+}
+
+.icone {
+  position: absolute;
+  width: 1.5rem;
+  height: auto;
+}
+
+.icone-presente {
+  top: 1.25rem;
+  left: 15%;
+}
+
+.icone-fone {
+  top: 1.25rem;
+  right: 15%;
+  transform: rotate(15deg);
+}
+
+.destaques {
+  padding-block: 1.5rem 2rem;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.lista-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lista-item::before {
+  content: "";
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--cor-bege);
+  background-image: url('assets/icone-aviao.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.25rem;
+}
+
+.lista-item:nth-child(2)::before {
+  background-image: url('assets/icone-fone.png');
+}
+
+.lista-item:nth-child(3)::before {
+  background-image: url('assets/icone-controle.png');
+}
+
+.barra {
+  flex: 1;
+  background-color: var(--cor-vinho);
+  color: var(--cor-branco);
+  font-size: clamp(0.85rem, 0.8vw + 0.5rem, 1rem);
+  font-weight: bold;
+  border-radius: 999px;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+}
+
+.filme {
+  width: 100%;
+  margin-block: clamp(2rem, 5vw, 4rem);
+  background-color: #000;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filme-quadros {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  width: max-content;
+}
+
+.filme-quadros::before,
+.filme-quadros::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: repeating-linear-gradient(90deg, white 0 20px, transparent 20px 40px);
+}
+
+.filme-quadros::before {
+  top: 0;
+}
+
+.filme-quadros::after {
+  bottom: 0;
+}
+
+.quadro {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.quadro-figura {
+  margin: 0;
+  background-color: #FFF;
+}
+
+.quadro-figura img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.cartoes {
+  position: relative;
+  padding-block: 2rem;
+}
+
+.cartao {
+  height: 100%;
+  min-height: 9rem;
+  background-color: var(--cor-bege);
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.cartao-titulo {
+  font-size: clamp(1.1rem, 1.5vw + 0.8rem, 1.4rem);
+}
+
+.cartao-texto {
+  margin: 0;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.05rem);
+  font-weight: normal;
+}
+
+.icone-aviao {
+  top: 0.625rem;
+  right: 1.5rem;
+}
+
+.rodape {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 15vh;
+  padding-inline: 1.5rem;
+  background-color: var(--cor-carmim);
+
+  -webkit-mask-image: var(--onda);
+  mask-image: var(--onda);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.rodape-link,
+.rodape-link:hover {
+  color: var(--cor-branco);
+}
+
+@media (min-width: 768px) {
+  .menu .container-fluid {
+    flex-direction: row;
+  }
+
+  .perfil {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    padding-block: 3.75rem 4.375rem;
+    text-align: left;
+  }
+
+  .icone-presente {
+    top: 2.1875rem;
+    left: 30%;
+  }
+
+  .icone-fone {
+    top: 2.5rem;
+    right: 5%;
+  }
+
+  .destaques {
+    padding-bottom: 3rem;
+  }
+
+  .filme {
+    overflow-x: visible;
+  }
+
+  .filme-quadros {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding-inline: 0;
+    width: 100%;
+  }
+
+  .cartoes {
+    padding-block: 3rem;
+  }
+
+  .cartao {
+    padding: 2rem;
+  }
+
+  .icone-aviao {
+    top: -1rem;
+  }
+}
