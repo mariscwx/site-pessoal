@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariana - Site Pessoal</title>
+    <link rel="stylesheet" href="../css/mariana.css">
 </head>
 <body>
-    
+<div class="pagina">
+
+    <!-- NAVEGAÇÃO -->
+    <header class="topo">
+        <nav class="menu" aria-label="Navegação entre páginas">
+            <a href="#" class="menu__logo"><img src="../assets-mariana/logo.svg" alt="Ytê"></a>
+            <ul class="menu__lista">
+                <li><a href="pagina-julie.html" class="menu__link menu__link--julie">Julie</a></li>
+                <li><a href="pagina-mariana.html" class="menu__link menu__link--ativo" aria-current="page">Mariana</a></li>
+                <li><a href="pagina-mayte.html" class="menu__link menu__link--mayte">Maytê</a></li>
+                <li><a href="pagina-pedro.html" class="menu__link menu__link--pedro">Pedro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INÍCIO -->
+        <section class="inicio">
+            <div class="inicio__texto">
+                <h1 class="inicio__titulo">Mariana Almeida</h1>
+                <p class="inicio__descricao">
+                    Uma <strong>página pessoal</strong> com <strong>meus</strong> interesses, curiosidades, lugares marcantes e habilidades.
+                </p>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section class="sobre">
+            <h2 class="titulo-secao titulo-secao--creme">Sobre mim</h2>
+
+            <div class="sobre__caixa">
+                <p>
+                    Sou muito <strong>tímida</strong> e desde pequena sempre tive dificuldades para falar em público, mas costumo me soltar mais com quem eu conheço. Também <strong>sou muito risonha e chorona</strong>, então sempre costumo estar em um dos extremos. Minha família inteira mora em <strong>São Bernardo/Diadema</strong> e me mudei para <strong>São Paulo no começo de 2026</strong> depois de ser aceita no processo de admissão. <strong>Me apaixonei por programação</strong> durante o curso preparatório e não consigo me imaginar em outra profissão. Além disso, me considero alguém <strong>determinada</strong> para conseguir o que eu almejo.
+                </p>
+            </div>
+
+            <ul class="sobre__tags">
+                <li class="tag"><span class="tag__bolinha"></span>Introvertida</li>
+                <li class="tag"><span class="tag__bolinha"></span>Área de exatas</li>
+                <li class="tag"><span class="tag__bolinha"></span>Analítica</li>
+            </ul>
+        </section>
+
+        <!-- FAVORITOS -->
+        <section class="favoritos">
+            <h2 class="titulo-secao titulo-secao--rosa">Favoritos</h2>
+            <p class="favoritos__sub">Coisas que eu gosto, curiosidades sobre mim e o que eu amo.</p>
+
+            <div class="cards">
+                <article class="card">
+                    <h3 class="card__titulo">Interesses</h3>
+                    <ul class="card__pilulas">
+                        <li>Romance</li>
+                        <li>Jogos</li>
+                        <li>Livros</li>
+                        <li>Séries</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__titulo">Curiosidades</h3>
+                    <ul class="card__lista">
+                        <li>Tenho uma <strong>ofensiva no Duolingo</strong> de 400+ dias</li>
+                        <li>Escuto <strong>todo tipo de música</strong></li>
+                        <li>Amo <strong>jogos e filmes de terror</strong></li>
+                        <li>Sou <strong>alérgica</strong> a quase tudo</li>
+                        <li>Tenho <strong>20+ medalhas e certificados</strong> do Etapa</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__titulo">Eu amo...</h3>
+                    <img class="card__imagem" src="../assets-mariana/gostos.png" alt="The Weeknd, Slipknot, Linkin Park, Leon (Resident Evil) e Hunter x Hunter">
+                </article>
+            </div>
+        </section>
+
+        <!-- LUGARES -->
+        <section class="lugares">
+            <div class="lugares__grade">
+                <figure class="lugar">
+                    <a href="https://pt.wikipedia.org/wiki/Paris" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets-mariana/paris.jpg" alt="Torre Eiffel, em Paris">
+                        <figcaption>Paris - França</figcaption>
+                    </a>
+                </figure>
+                <figure class="lugar">
+                    <a href="https://pt.wikipedia.org/wiki/Seul" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets-mariana/seul.jpg" alt="Vista de Seul à noite">
+                        <figcaption>Seoul - Korea</figcaption>
+                    </a>
+                </figure>
+                <h2 class="titulo-secao titulo-secao--creme lugares__titulo">Lugares</h2>
+                <figure class="lugar">
+                    <a href="https://pt.wikipedia.org/wiki/Hokkaido" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets-mariana/hokkaido.png" alt="Montanha nevada em Hokkaido">
+                        <figcaption>Hokkaido - Japão</figcaption>
+                    </a>
+                </figure>
+                <figure class="lugar">
+                    <a href="https://pt.wikipedia.org/wiki/Roma" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets-mariana/roma.png" alt="Coliseu, em Roma">
+                        <figcaption>Roma - Itália</figcaption>
+                    </a>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+</div>
 </body>
 </html>
