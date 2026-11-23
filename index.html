@@ -1,15 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início - Site Pessoal</title>
+    <title>Ytê | Trabalho Desenvolvimento</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <h1>trabalho desenvolvimento</h1>
-        <p>Veja as páginas sobre nós e nos conheça.</p>
-    </main>  
+
+<header class="header">
+    <a href="index.html" class="header__logo">
+        <img src="images-home/logo.png" alt="Ytê"> <!-- adicionar depois -->
+    </a>
+    <nav class="header__nav">
+        <a href="pages/pagina-julie.html" class="nav--julie">Julie</a>
+        <a href="pages/pagina-mariana.html" class="nav--mariana">Mariana</a>
+        <a href="pages/pagina-mayte.html" class="nav--mayte">Maytê</a>
+        <a href="pages/pagina-pedro.html" class="nav--pedro">Pedro</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__card hero__card--mayte"><img src="images-home/mayte-abraçada-tablet.jpeg" alt="Maytê"></div>
+        <div class="hero__card hero__card--pedro"><img src="images-home/pedro-livro.jpeg" alt="Pedro"></div> <!-- adicionar depois -->
+        <div class="hero__card hero__card--mari"><img src="images-home/mari-fone.jpeg" alt="Mariana"></div>
+        <div class="hero__card hero__card--julie"><img src="images-home/julie-rindo.jpeg" alt="Julie"></div>
+
+        <div class="hero__titulo">
+            <span class="estrela estrela--1"></span>
+            <span class="estrela estrela--2"></span>
+            <span class="estrela estrela--3"></span>
+            <h1>
+                <span class="t-trabalho">trabalho</span>
+                <span class="t-desenvolvimento">Desenvolvimento</span>
+            </h1>
+        </div>
+    </section>
+
+    <div class="onda"></div>
+
+
+    <!-- SOBRE NÓS -->
+    <section class="sobre">
+        <div class="sobre__imagens">
+            <img class="sobre__img sobre__img--mari" src="images-home/mariana-sobre.png" alt="Mariana">
+            <img class="sobre__img sobre__img--mayte" src="images-home/mayte-sobre.png" alt="Maytê">
+            <img class="sobre__img sobre__img--pedro" src="images-home/pedro-sobre.png" alt="Pedro">
+            <img class="sobre__img sobre__img--julie" src="images-home/julie-sobre.png" alt="Julie">
+        </div>
+
+        <div class="sobre__texto">
+            <h2>
+                <span class="sobre__verde">Sobre</span>
+                <span class="sobre__nos">nós<img class="sobre__tira" src="images-home/tira-azul.png" alt=""></span>
+            </h2>
+            <p>Somos a Ytê, um grupo de quatro amigos que reuniu em um só lugar histórias, gostos e jeitos diferentes de ver o mundo. Neste site, cada um de nós apresenta um pouco da sua trajetória, dos seus interesses e das suas habilidades. Explore as páginas e venha conhecer melhor quem faz parte deste trabalho!</p>
+        </div>
+    </section>
+
+    <!-- MARIANA -->
+    <section class="perfil perfil--mariana">
+        <div class="perfil__moldura"><img src="images-home/mari-principal.png" alt="Mariana"></div>
+        <div class="perfil__texto">
+            <h3><span class="conheca">conheça</span><img class="mini" src="images-home/mari-fone.jpeg" alt=""><br><span class="nome">Mariana</span></h3>
+            <p>Oi, tudo bem? Eu sou a Mariana, e este é o meu cantinho para mostrar um pouco de quem eu sou. Aqui você vai conhecer minha história, descobrir meus gostos e favoritos, ver lugares que já visitei e outros que sonho em conhecer, além de saber mais sobre minhas habilidades e interesses. Fique à vontade para explorar cada detalhe da minha trajetória!</p>
+            <a href="pages/pagina-mariana.html" class="btn btn--branco">Saber mais agora <span>&rsaquo;</span></a>
+        </div>
+        <span class="perfil__estrela"></span>
+    </section>
+
+    <div class="onda"></div>
+
+    <!-- PEDRO -->
+    <section class="perfil perfil--pedro">
+        <div class="perfil__texto">
+            <h3><span class="conheca">conheça</span><img class="mini" src="images-home/pedro-notebook.jpeg" alt=""><br><span class="nome">Pedro</span></h3>
+            <p>Muito prazer! Sou o Pedro, e este é um espaço para compartilhar um pouco de quem eu sou. Aqui você vai conhecer minha história, descobrir meus gostos e favoritos, explorar lugares que já visitei e outros que ainda quero conhecer, além de saber mais sobre minhas habilidades e interesses. Afinal, cada detalhe conta um pouco da minha trajetória!</p>
+            <a href="pages/pagina-pedro.html" class="btn btn--lima">Saber mais agora <span>&rsaquo;</span></a>
+        </div>
+        <div class="perfil__moldura"><img src="images-home/pedro-principal.png" alt="Pedro"></div>
+        <span class="perfil__estrela"></span>
+    </section>
+
+    <!-- MAYTÊ -->
+    <section class="perfil perfil--mayte">
+        <div class="perfil__moldura"><img src="images-home/mayte-principal.png" alt="Maytê"></div>
+        <div class="perfil__texto">
+            <h3><span class="conheca">conheça</span><img class="mini" src="images-home/mayte-abraçada-tablet.jpeg" alt=""><br><span class="nome">Maytê</span></h3>
+            <p>Olá! Eu sou a Maytê, e este espaço foi feito para você me conhecer melhor. Aqui você vai encontrar um pouco da minha história, das coisas que eu amo, dos lugares que já passei e dos que ainda quero explorar, além das minhas habilidades e interesses. Venha descobrir cada pedacinho da minha trajetória!</p>
+            <a href="pages/pagina-mayte.html" class="btn btn--branco">Saber mais agora <span>&rsaquo;</span></a>
+        </div>
+        <span class="perfil__estrela"></span>
+    </section>
+
+    <div class="onda"></div>
+
+    <!-- JULIE -->
+    <section class="perfil perfil--julie">
+        <div class="perfil__texto">
+            <h3><span class="conheca">conheça</span><img class="mini" src="images-home/julie-rindo.jpeg" alt=""><br><span class="nome">Julie Annie</span></h3>
+            <p>Seja bem-vindo(a)! Eu sou a Julie Annie, e este é um espaço para compartilhar um pouco da minha jornada. Aqui você vai conhecer minha história, meus gostos e favoritos, os lugares que já visitei e os que ainda quero conhecer, além das minhas habilidades e interesses. Cada detalhe conta um pouco de quem eu sou!</p>
+            <a href="pages/pagina-julie.html" class="btn btn--ciano">Saber mais agora <span>&rsaquo;</span></a>
+        </div>
+        <div class="perfil__moldura"><img src="images-home/julie-principal.png" alt="Julie Annie"></div>
+        <span class="perfil__estrela"></span>
+    </section>
+
+</main>
 </body>
 </html>
