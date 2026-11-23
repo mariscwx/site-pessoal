@@ -20,7 +20,7 @@ O site é composto por uma página inicial (*Home*) e quatro páginas individuai
 
 - HTML5
 - CSS3
-- JavaScript
+- Figma
 
 ## Integrantes
 
